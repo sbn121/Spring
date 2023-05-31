@@ -8,8 +8,12 @@ import javax.xml.crypto.Data;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import customer.CustomerVO;
 
 @Controller
 public class TestController {
@@ -53,12 +57,46 @@ public class TestController {
 	public String join(HttpServletRequest request, Model model) {
 		//전송된 파라미터 접근
 		String name = request.getParameter("name");
+		//String -> int, int <-> Integer
+		//int age = Integer.parseInt(request.getParameter("age"));
+		int age = Integer.valueOf( request.getParameter("age"));
 		model.addAttribute("gender", request.getParameter("gender"));
 		model.addAttribute("email", request.getParameter("email"));
+		model.addAttribute("age", age);
 		
 		//파라미터값을 정보화면에 출력할 수 있도록 Model에 담기 
 		model.addAttribute("name", name);
 		model.addAttribute("method", "HttpServletRequest 방식");
+		
+		return "member/info";
+	}
+	
+	@RequestMapping("/joinParam")
+	public String join(@RequestParam String name, @RequestParam("gender") String g, String email, int age, Model model) {
+		model.addAttribute("method", "@RequestParam");
+		model.addAttribute("name", name);
+		model.addAttribute("gender", g);
+		model.addAttribute("email", email);
+		model.addAttribute("age", age);
+		return "member/info";
+	}
+	
+	@RequestMapping("/joinDataObject")
+	public String join(CustomerVO vo, Model model) {
+//		model.addAttribute("name", vo.getName());
+		model.addAttribute("vo", vo);
+		model.addAttribute("method", "데이터객체");
+		return "member/info";
+	}
+	
+	@RequestMapping("/joinPath/{name}/{gender}/{mail}/{age}")
+	public String join(Model model, @PathVariable String name, @PathVariable String gender,
+						@PathVariable("mail") String email, @PathVariable int age) {
+		model.addAttribute("name", name);
+		model.addAttribute("gender", gender);
+		model.addAttribute("email", email);
+		model.addAttribute("age", age);
+		model.addAttribute("method", "@PathVariable 방식");
 		
 		return "member/info";
 	}

@@ -1,0 +1,12 @@
+package com.hanul.web;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class MemberController {
+	
+	//로그인화면요청
+	public String login() {
+		return "member/login";
+	}
+}

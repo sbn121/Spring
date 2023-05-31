@@ -1,0 +1,13 @@
+package kr.co.smart;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class CustomerController {
+	
+	// 고객목록화면 요청
+	public String list() {
+		return "customer";
+	}
+	
+}
