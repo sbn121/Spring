@@ -7,6 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>고객목록</h3>
+	<h3 class="my-4">고객목록</h3>
+	<table class="tb-list">
+		<tr>
+			<th>고객명</th>
+			<th>전화번호</th>
+			<th>이메일</th>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>010.1234.5678</td>
+			<td>hgd@naver.com</td>
+		</tr>
+	</table>
 </body>
 </html>
