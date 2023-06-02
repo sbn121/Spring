@@ -1,0 +1,6 @@
+package com.my.app;
+
+@run
+public class DBTest {
+	
+}

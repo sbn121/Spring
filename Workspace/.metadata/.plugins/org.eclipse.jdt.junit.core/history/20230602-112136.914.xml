@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DBTest.connect" project="99.test" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.my.app.DBTest" time="0.471" displayname="DBTest" uniqueid="[engine:junit-vintage]/[runner:com.my.app.DBTest]">
+    <testcase name="connect" classname="com.my.app.DBTest" time="0.471" displayname="connect" uniqueid="[engine:junit-vintage]/[runner:com.my.app.DBTest]/[test:connect(com.my.app.DBTest)]"/>
+  </testsuite>
+</testrun>
