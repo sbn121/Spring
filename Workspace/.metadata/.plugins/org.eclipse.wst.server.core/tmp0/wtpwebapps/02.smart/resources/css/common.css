@@ -28,3 +28,8 @@ table.tb-row {
 table.tb-list th, table.tb-list td {
 	text-align: center;
 }
+
+a.text-link:hover {
+	color: #0d6efd;
+	text-decoration: underline;
+}
