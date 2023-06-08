@@ -20,7 +20,7 @@
 				<td>
 					<div class="row">
 						<div class="col-auto">
-							<input type="text" name="name" class="form-control" requiredS>
+							<input type="text" name="name" class="form-control" required>
 						</div>
 					</div>
 				</td>

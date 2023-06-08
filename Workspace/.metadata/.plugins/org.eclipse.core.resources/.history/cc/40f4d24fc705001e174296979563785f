@@ -1,0 +1,37 @@
+package hr;
+
+import java.util.List;
+
+public class HrDAO implements HrService {
+
+	@Override
+	public int employee_insert(EmployeeVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<EmployeeVO> employee_list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployeeVO employee_info(int employee_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int employee_update(EmployeeVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int employee_delete(int employee_id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

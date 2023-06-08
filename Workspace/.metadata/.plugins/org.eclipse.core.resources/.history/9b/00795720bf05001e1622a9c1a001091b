@@ -1,0 +1,13 @@
+package kr.co.smart;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HrController {
+	
+	// 사원목록화면 요청
+	public String list() {
+		return "hr/list";
+	}
+
+}
