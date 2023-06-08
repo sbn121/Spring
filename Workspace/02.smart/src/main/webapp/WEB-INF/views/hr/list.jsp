@@ -8,6 +8,22 @@
 </head>
 <body>
 	<h3 class="my-4">사원목록</h3>
+	
+	<div class="row">
+		<div class="col-auto d-flex align-items-center">
+			<label class="me-3">부서명</label>
+			<select class="form-control col">
+				<option>전체</option>
+				<option>Executive</option>
+				<option>IT</option>
+				<option>Finance</option>
+				<option>Purchasing</option>
+				<option>Shipping</option>
+				<option>Sales</option>
+			</select>
+		</div>
+	</div>
+	
 	<table class="tb-list">
 	<colgroup>
 		<col width="80px">
