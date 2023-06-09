@@ -1,0 +1,11 @@
+/** 
+ * 공통 함수 선언
+*/
+
+$(function(){
+	$.datepicker.setDefault({
+		dateFormat: "yy-mm-dd"
+	})
+	
+	 $( ".date" ).datepicker();
+})

@@ -1,0 +1,9 @@
+/** 
+ * 공통 함수 선언
+*/
+
+$(function(){
+	$.datepicker.setDefault()
+	
+	 $( ".date" ).datepicker();
+})
