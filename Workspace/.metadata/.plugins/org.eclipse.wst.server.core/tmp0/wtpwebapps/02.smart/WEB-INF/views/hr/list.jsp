@@ -10,7 +10,7 @@
 	<h3 class="my-4">사원목록</h3>
 	
 	<form action="list" method="post">
-	<div class="row my-3">
+	<div class="row my-3 justify-content-between">
 		<div class="col-auto d-flex align-items-center">
 			<label class="me-3">부서명</label>
 			<select name="department_id" class="form-select col" onchange="submit()">
@@ -19,6 +19,9 @@
 				<option value="${d.department_id }" ${d.department_id eq department_id ? 'selected' : '' }>${d.department_name }</option>
 				</c:forEach>
 			</select>
+		</div>
+		<div class="col-auto">
+			<button type="button" onclick="location='new'" class="btn btn-primary">사원등록</button>
 		</div>
 	</div>
 	</form>

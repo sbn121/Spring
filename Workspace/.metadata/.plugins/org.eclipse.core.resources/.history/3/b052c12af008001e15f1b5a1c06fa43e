@@ -1,0 +1,48 @@
+/** 
+ * 공통 함수 선언
+ */
+ 
+
+$(function(){
+	var today = new Date();
+	var range = today.getFullYear()-100 + ':' + today.getFullYear();
+	$.datepicker.setDefaults({
+		dateFormat: "yy-mm-dd",
+		changeYear: true,
+		changeMonth: true,
+		yearRange: range,
+		showMonthAfterYear: true,
+		monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+		dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+		maxDate: today,
+	})
+	
+	 $( ".date" ).datepicker();
+	 $( ".date" ).attr('readonly', true);
+})
+
+function modalAlert(type, title, message){
+	$('#modal-alert .modal-title').html(title);
+	$('#modal-alert .modal-body').html(message);
+	
+	
+	$('.modal-icon').removeClass('text-info text-waring text-danger text-primary fa-circle-question fa-circle-exclamation')
+	
+	if(type=='danger') {//confirm에 해당
+		//아니오, 예 버튼
+		$('.modal-footer .btn-ok').addClass('btn-secondary').text('아니오')
+		$('.modal-footer .btn-danger').removeClass('d-none')
+		
+		
+		$('.modal-footer .btn-danger').addClass('d-none')// 아이콘 물음표
+		
+	}else {
+		$('.modal-footer .btn-danger').addClass('d-none')
+	}
+}
+
+
+
+
+
+

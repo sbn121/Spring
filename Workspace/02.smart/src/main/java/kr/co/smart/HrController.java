@@ -64,5 +64,25 @@ public class HrController {
 		return "redirect:info?id="+vo.getEmployee_id();
 	}
 	
+	//사원정보 삭제처리 요청
+	@RequestMapping("/delete")
+	public String delete(int id) {
+		// 해당 사원정보를 DB에서 삭제한 후
+		// 목록화면연결
+		service.employee_delete(id);
+		return "redirect:list";
+	}
+	
+	@RequestMapping("/new")
+	public String register() {
+		return "hr/new";
+	}
+	
+	@RequestMapping("/register")
+	public String register(EmployeeVO vo, Model model) {
+		service.employee_insert(vo);
+		return "redirect:list";
+	}
+	
 
 }
