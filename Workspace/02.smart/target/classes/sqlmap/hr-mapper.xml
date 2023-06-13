@@ -65,7 +65,11 @@
 	<insert id="insert">
 		insert into employees (employee_id, last_name, first_name, email, phone_number, salary, hire_date, job_id, department_id)
 		values 
-		(#{employee_id}, #{last_name}, #{first_name}, #{email}, #{phone_number}, #{salary}, #{hire_date}, #{job_id}, #{department_id})
+		(employees_seq.nextval, #{last_name}, #{first_name}, #{email}, #{phone_number}, #{salary}, #{hire_date}, #{job_id}, 
+		<choose><when test="department_id==-1">null</when>
+		<otherwise>#{department_id}</otherwise>
+		</choose>
+		)
 	</insert>
 	
 	

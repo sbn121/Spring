@@ -74,9 +74,11 @@ public class HrController {
 	}
 	
 	@RequestMapping("/new")
-	public String register() {
-		return "hr/new";
-	}
+	public String register(Model model) {
+	model.addAttribute("departments", service.department_list());
+	model.addAttribute("jobs", service.job_list());
+	return "hr/new";
+	} 
 	
 	@RequestMapping("/register")
 	public String register(EmployeeVO vo, Model model) {

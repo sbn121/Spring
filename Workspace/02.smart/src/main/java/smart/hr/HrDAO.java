@@ -14,7 +14,7 @@ public class HrDAO implements HrService {
 	
 	@Override
 	public int employee_insert(EmployeeVO vo) {
-		return sql.insert("hr.list", vo);
+		return sql.insert("hr.insert", vo);
 	}
 
 	@Override

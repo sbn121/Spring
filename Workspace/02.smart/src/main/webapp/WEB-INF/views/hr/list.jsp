@@ -8,7 +8,6 @@
 </head>
 <body>
 	<h3 class="my-4">사원목록</h3>
-	
 	<form action="list" method="post">
 	<div class="row my-3 justify-content-between">
 		<div class="col-auto d-flex align-items-center">
