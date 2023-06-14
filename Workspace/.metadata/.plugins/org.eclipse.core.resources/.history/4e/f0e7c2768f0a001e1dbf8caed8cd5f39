@@ -1,0 +1,79 @@
+package smart.common;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.HtmlEmail;
+import org.springframework.stereotype.Service;
+
+import smart.member.MemberVO;
+
+@Service
+public class CommonUtility {
+	
+	// context root url 지정
+	public String appURL(HttpServletRequest request) {
+		//http://localhost:8080/smart
+		StringBuffer url = new StringBuffer("http://");
+		//localhost = 192.168.0.33 = 본인 ip
+		url.append(request.getServerName()).append(":"); // http://localhost:
+		url.append(request.getServerPort()); // http://localhost:8080
+		url.append(request.getContextPath()); // http://localhost:8080/smart
+		return url.toString();
+	}
+	
+	private String EMAIL_ADDRESS = "itstudydev@naver.com";
+	
+	// 이메일 보내기
+	public boolean sendPassword(MemberVO vo) {
+		boolean send = true;
+		HtmlEmail email = new HtmlEmail();
+		email.setCharset("utf-8");
+		email.setDebug(true); //이메일전송 과정 Console에서 로그로 확인
+		
+		emailServerConnect(email);
+		
+		try {
+			email.setFrom(EMAIL_ADDRESS, "스마트 웹&앱 관리자"); //관리자가 보내는 이
+			email.addTo(vo.getEmail(), vo.getName()); // 받는 사람 지정
+			//email.addTo("박문수"); // 받는 사람 지정
+			
+			email.setSubject("스마트 웹&앱 관리자");	// 제목쓰기
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return send;
+	}
+	
+	private void emailServerConnect(HtmlEmail email) {
+		email.setHostName("smtp.naver.com"); //메일서버지정
+		email.setAuthentication("itstudydev", "Itstudy10102"); //아이디/비번으로 로그인
+		email.setSSLOnConnect(true); //로그인버튼 클릭
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

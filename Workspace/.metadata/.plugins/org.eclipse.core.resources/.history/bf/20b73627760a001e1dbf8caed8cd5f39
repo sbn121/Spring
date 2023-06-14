@@ -1,0 +1,37 @@
+package smart.member;
+
+import java.util.List;
+
+public class MemberDAO implements MemberService {
+
+	@Override
+	public int member_join(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public MemberVO member_info(String userid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<MemberVO> member_list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int member_update(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int member_delete(String userid) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

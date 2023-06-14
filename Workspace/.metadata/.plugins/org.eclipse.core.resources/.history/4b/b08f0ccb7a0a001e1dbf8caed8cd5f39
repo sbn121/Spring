@@ -1,0 +1,17 @@
+package smart.common;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class CommonUtility {
+	
+	// context root url 지정
+	public void appURL(HttpServletRequest request) {
+		//http://localhost:8080/smart
+		StringBuffer url = new StringBuffer("http://");
+		//localhost = 192.168.0.33 = 본인 ip
+		url.append(request.getServerName()).append(":"); // http://localhost:
+		url.append(request.getServerPort()); // http://localhost:8080
+		url.append(request.getContextPath()); // http://localhost:8080/smart/
+		
+	}
+}

@@ -1,0 +1,11 @@
+package smart.common;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class CommonUtility {
+	
+	// context root url 지정
+	public void appURL(HttpServletRequest request) {
+		
+	}
+}
