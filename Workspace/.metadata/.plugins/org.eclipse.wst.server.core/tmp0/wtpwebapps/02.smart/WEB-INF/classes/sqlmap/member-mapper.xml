@@ -19,7 +19,7 @@ select * from member where userid = #{userid}
 </select>
 
 <!-- 해당 아이디와 이메일에 해당하는 회원명 조회 -->
-<select id="userEmail" resultType="string">
+<select id="useridEmail" resultType="string">
 	select name from member where userid = #{userid} and email = #{email}
 </select>
 

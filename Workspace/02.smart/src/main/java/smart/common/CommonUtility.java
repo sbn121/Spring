@@ -22,7 +22,7 @@ public class CommonUtility {
 		return url.toString();
 	}
 	
-	private String EMAIL_ADDRESS = "itstudydev@naver.com";
+	private String EMAIL_ADDRESS = "sbn121@naver.com";
 	
 	// 이메일 보내기
 	public boolean sendPassword(MemberVO vo, String pw) {
@@ -41,7 +41,6 @@ public class CommonUtility {
 			email.setSubject("스마트 웹&앱 로그인 임시 비밀번호");	// 제목쓰기
 			
 			StringBuffer content = new StringBuffer();
-			content.append("<h3>[김혜민]님 임시 비밀번호가 발급되었습니다.</h3>");
 			content.append("<h3>[").append(vo.getName()).append("]님 임시 비밀번호가 발급되었습니다.</h3>");
 			content.append("<div>아이디 : ").append(vo.getUserid()).append("</div>");
 			content.append("<div>임시 비밀번호 : <strong>").append(pw).append("</strong></div>");
@@ -56,7 +55,7 @@ public class CommonUtility {
 	
 	private void emailServerConnect(HtmlEmail email) {
 		email.setHostName("smtp.naver.com"); //메일서버지정
-		email.setAuthentication("itstudydev", "Itstudy10102"); //아이디/비번으로 로그인
+		email.setAuthentication("sbn121", "thdqlcsk121"); //아이디/비번으로 로그인
 		email.setSSLOnConnect(true); //로그인버튼 클릭
 	}
 	

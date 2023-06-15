@@ -26,7 +26,7 @@
 	                       <label>이메일</label>
 	                   </div>
 	                   <div class="d-flex gap-3 justify-content-center">
-	                       <a class="btn btn-primary form-control py-3" onclick="$('form').submit">확인</a>
+	                       <a class="btn btn-primary form-control py-3" onclick="$('form').submit()">확인</a>
 	                       <a class="btn btn-outline-primary form-control py-3" href="login">취소</a>
 	                   </div>
 	               </form>

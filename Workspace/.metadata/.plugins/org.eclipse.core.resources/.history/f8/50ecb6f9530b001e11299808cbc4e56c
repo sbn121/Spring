@@ -1,0 +1,23 @@
+/**
+ * 회원정보 관련 처리
+ */
+ 
+ var member = {
+	// 태그별로 상태확인
+	tagStatus: function(tag){
+		if(tag.is("[name=userpw]")) 		return this.userpwStatus(tag.val());
+		else if(tag.is("[name-userpw_ck]")) return this.userpwCheckStatus(tag.val());
+	},
+	
+	common : {
+		empty: {is:false, desc:'입력하세요'}
+	},
+	
+	userpwStatus: function(pw){
+		if(pw=="") return this.common.empty;
+	},
+	userpwCheckStatus: function(pwCheck){
+		
+	}
+	
+}

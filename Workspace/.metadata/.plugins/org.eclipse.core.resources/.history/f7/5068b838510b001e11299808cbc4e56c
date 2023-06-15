@@ -1,0 +1,11 @@
+/**
+ * 회원정보 관련 처리
+ */
+ 
+ var member = {
+	// 태그별로 상태확인
+	tagStatus: function(tag){
+		
+	}
+	
+}

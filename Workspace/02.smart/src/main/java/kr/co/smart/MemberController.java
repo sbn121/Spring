@@ -41,6 +41,7 @@ public class MemberController {
 			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
 		}
 		if(match) {
+			session.setAttribute("loginInfo", vo);
 			return "redirect:/";
 		}else {
 			redirect.addFlashAttribute("fail", true);
@@ -96,7 +97,7 @@ public class MemberController {
 			vo.setName(name);
 			// 임시 비번을 생성한 후 DB의 회원정보로 저장 임시비번을 이메일로 보내준다.
 			String pw = UUID.randomUUID().toString(); // sfda231-564asfd-sfda645
-			pw.substring(pw.lastIndexOf("-")+1); //sfda645
+			pw = pw.substring(pw.lastIndexOf("-")+1); //sfda645
 			vo.setUserpw(pwEncoder.encode(pw)); //암호화된 임시비번
 			
 			if(service.member_resetPassword(vo)==1 && common.sendPassword(vo, pw)) {
@@ -112,6 +113,15 @@ public class MemberController {
 		msg.append("</script>");
 		return msg.toString();
 	}
+	
+	//비밀번호 변경화면 요청
+	@RequestMapping("/changePassword")
+	public String change(HttpSession session) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginInfo");
+		if(vo==null) return "redirect:login";
+		else		 return "member/change";
+	}
+	
 	
 	
 }
