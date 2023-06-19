@@ -33,3 +33,11 @@ a.text-link:hover {
 	color: #0d6efd;
 	text-decoration: underline;
 }
+
+.profile {width: 38px; 
+		height : 38px; 
+		border-radius : 50%}
+
+.font-profile {
+	font-size : 38px;
+}

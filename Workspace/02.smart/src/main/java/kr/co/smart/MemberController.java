@@ -5,6 +5,7 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -122,6 +123,136 @@ public class MemberController {
 		else		 return "member/change";
 	}
 	
+	//현재비밀번호 확인 요청
+	@ResponseBody @RequestMapping("/confirmPassword")
+	public int confirm(String userpw, String userid) {
+		//화면에서 입력한 현재 비밀번호가 DB에 있는지 확인
+		MemberVO vo = service.member_info(userid);
+		return pwEncoder.matches(userpw, vo.getUserpw()) ? 0 : 1;
+	}
+	
+	//새비밀번호 변경저장 처리 요청
+	@ResponseBody @RequestMapping("/updatePassword")
+	public boolean update(MemberVO vo) {
+		//화면에서 입력한 새 비밀번호로 DB에 변경저장
+		vo.setUserpw(pwEncoder.encode(vo.getUserpw()));
+		return service.member_resetPassword(vo)==1 ? true : false;
+	}
+	
+	//로그아웃 처리 요청
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("loginInfo");
+		return "redirect:/";
+	}
+	
+	// id : yODCkg6qF78LHByNNKBN
+	// secret : hOyLABPxwo
+	
+	private String NAVER_ID = "yODCkg6qF78LHByNNKBN";
+	private String NAVER_SECRET = "hOyLABPxwo";
+	private String KAKAO_ID = "8d230b54a97dc8a92c5a160ca186023b";
+	
+	//네이버로그인처리 요청
+	@RequestMapping("/naverLogin")
+	public String naverLogin(HttpSession session, HttpServletRequest request) {
+		// 네이버 로그인 연동 URL 생성하기
+		// https://nid.naver.com/oauth2.0/authorize?response_type=code
+		// &client_id=CLIENT_ID
+		// &state=STATE_STRING
+		// &redirect_uri=CALLBACK_URL
+		String state = UUID.randomUUID().toString();
+		session.setAttribute("state", state);
+		
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/authorize?response_type=code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&state=").append(state);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/naverCallback");
+		// http://localhost:8080/smart/member/naverCallback
+		return "redirect:"+url.toString();
+	}
+	
+	// 네이버 콜백처리
+	@RequestMapping("/naverCallback")
+	public String naverCallback(String code, String state, HttpSession session) {
+		String storedState = (String) session.getAttribute("state");
+		if(code==null||!state.equals(state)) return "redirect:/";
+		
+		// 접근 토큰 발급 요청
+		// https://nid.naver.com/oauth2.0/token?grant_type=authorization_code
+		// &client_id=jyvqXeaVOVmV
+		// &client_secret=527300A0_COq1_XV33cf
+		// &code=EIc5bFrl4RibFls1
+		// &state=9kgsGTfH4j7IyAkg  
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/token?grant_type=authorization_code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&client_secret=").append(NAVER_SECRET);
+		url.append("&code=").append(code);
+		url.append("&state=").append(state);
+		
+		String response = common.requestAPI(url.toString());
+		// 문자열 --> JSON
+		JSONObject json = new JSONObject(response);
+		String token = json.getString("access_token");
+		String type = json.getString("token_type");
+		
+		// 접근 토큰을 이용하여 프로필 API 호출하기
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		response = common.requestAPI(url.toString(), type+" "+token);
+		json = new JSONObject(response);
+		if(json.getString("resultcode").equals("00")) {
+			json = json.getJSONObject("response");
+			MemberVO vo = new MemberVO();
+			vo.setSocial("N"); //N:네이버, K:카카오
+			vo.setUserid(json.getString("id"));
+			// 별칭이 있으면 별칭을, 없으면 이름을 name 필드에 담자
+			vo.setName(hasKey(json, "nickname"));
+			if(vo.getName().isEmpty()) {
+				vo.setName(hasKey(json, "name", "아무개"));
+			}
+			vo.setEmail(hasKey(json, "email"));
+			vo.setProfile(hasKey(json, "profile_image"));
+			vo.setGender(hasKey(json, "gender", "F").equals("M") ? "남" : "여"); // M/F --> 남/여
+			vo.setPhone(hasKey(json, "mobile"));
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		}
+		/*
+		{
+			  "resultcode": "00",
+			  "message": "success",
+			  "response": {
+			    "email": "openapi@naver.com",
+			    "nickname": "OpenAPI",
+			    "profile_image": "https://ssl.pstatic.net/static/pwe/address/nodata_33x33.gif",
+			    "age": "40-49",
+			    "gender": "F",
+			    "id": "32742776",
+			    "name": "오픈 API",
+			    "birthday": "10-01"
+			  }
+			}
+		*/
+		
+		return "redirect:/";
+	}
+	
+	private String hasKey(JSONObject json, String key) {
+		return json.has(key) ? json.getString(key) : "";
+	}
+	
+	//기본값을 지정해야 하는 이유
+	private String hasKey(JSONObject json, String key, String value) {
+		return json.has(key) ? json.getString(key) : value;
+	}
 	
 	
 }
