@@ -3223,3 +3223,2718 @@ org.eclipse.core.runtime.OperationCanceledException:
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-19 18:01:03.365
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bRvYvMJh => OK
+!SESSION 2023-06-20 08:40:07.394 -----------------------------------------------
+eclipse.buildId=4.14.0.202203131612
+java.version=11.0.18
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2023-06-20 08:41:29.763
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-20 08:41:29.763
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b20a8e4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ad4ef13,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-20 08:41:29.763
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29280ca6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c7a4986,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2023-06-20 08:41:34.242
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2023-06-20 08:41:34.242
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:44.477
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:44.479
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@30f7b987[org.springframework.tooling.boot.ls:1.32.0.202203131529(id=801)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:44.484
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:44.628
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-06-20 08:41:47.008
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:53.945
+!MESSAGE Boot LS startup time from start to initialized: 9348ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.695
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.eEuqRqaQisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.698
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.701
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.702
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.702
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.eEuqRqaQ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.704
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.724
+!MESSAGE classpath=72 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.729
+!MESSAGE buffering callback sts4.classpath.eEuqRqaQ 02.smart false 72
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.730
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.733
+!MESSAGE classpath=25 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.737
+!MESSAGE buffering callback sts4.classpath.eEuqRqaQ 01.web false 25
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.738
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.742
+!MESSAGE classpath=50 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.746
+!MESSAGE buffering callback sts4.classpath.eEuqRqaQ 99.test false 50
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:54.747
+!MESSAGE executing callback sts4.classpath.eEuqRqaQ 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-20 08:41:55.486
+!MESSAGE executing callback sts4.classpath.eEuqRqaQ SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:41.509
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:41.530
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:42.038
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:42.044
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:45.613
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:45.636
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:45.777
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:45:45.796
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:48:18.473
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:48:18.478
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:48:40.366
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:48:40.369
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-20 08:53:12.897
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package kr.co.smart;
+
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import smart.common.CommonUtility;
+import smart.member.MemberDAO;
+import smart.member.MemberVO;
+
+@Controller @RequestMapping("/member")
+public class MemberController {
+	@Autowired private MemberDAO service;
+	@Autowired private BCryptPasswordEncoder pwEncoder;
+	
+	//로그인화면 요청
+	@RequestMapping("/login")
+	public String login(HttpSession session) {
+		session.setAttribute("category", "login");
+		return "default/member/login";
+	}
+	
+	// 로그인처리 요청
+	@RequestMapping(value="/smartLogin")
+	public String login(String userid, String userpw, 
+						HttpSession session, HttpServletRequest request,
+						RedirectAttributes redirect) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		if(match) {
+			session.setAttribute("loginInfo", vo);
+			return "redirect:/";
+		}else {
+			redirect.addFlashAttribute("fail", true);
+			return "redirect:login"; //로그인화면 다시 요청
+		}
+	}
+	
+	/*
+	@ResponseBody @RequestMapping(value="/smartLogin", produces="text/html; charset=utf-8")
+	public String login(String userid, String userpw, HttpSession session, HttpServletRequest request) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		
+		StringBuffer msg = new StringBuffer("<script>");
+		if(match) {
+			//로그인되는 경우
+			session.setAttribute("loginInfo", vo); //세션에 로그인한 회원정보 담기
+			msg.append("location='")
+				.append(common.appURL(request))
+				.append("'");
+		}else {
+		//로그인되지 않는 경우
+			msg.append("alert('아이디나 비밀번호가 일치하지 않습니다!'); history.go(-1);");
+		}
+		msg.append("</script>");
+		return msg.toString();
+	}
+	*/
+	
+	@Autowired private CommonUtility common;
+	
+	//비밀번호 찾기 화면 요청
+	@RequestMapping("/findPassword")
+	public String find() {
+		return "default/member/find";
+	}
+	
+	//비밀번호 찾기 처리 요청
+	@ResponseBody @RequestMapping(value="/resetPassword", produces="text/html; charset=utf-8")
+	public String reset(MemberVO vo) {
+		// 화면에서 입력한 아이디/이메일이 일치하는 회원에게 임시 비번을 발급한다.
+		String name = service.member_userid_email(vo);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(name==null) {
+			msg.append("alert('아이디나 이메일이 맞지 않습니다. \\n확인하세요!');");
+			msg.append("location='findPassword'");
+		}else {
+			vo.setName(name);
+			// 임시 비번을 생성한 후 DB의 회원정보로 저장 임시비번을 이메일로 보내준다.
+			String pw = UUID.randomUUID().toString(); // sfda231-564asfd-sfda645
+			pw = pw.substring(pw.lastIndexOf("-")+1); //sfda645
+			vo.setUserpw(pwEncoder.encode(pw)); //암호화된 임시비번
+			
+			if(service.member_resetPassword(vo)==1 && common.sendPassword(vo, pw)) {
+				msg.append("alert('임시 비밀번호가 발급되었습니다. \\n이메일을 확인하세요');");
+				msg.append("location='login'"); //임시비번으로 로그인하도록 로그인화면 연결
+			}else {
+				msg.append("alert('임시 비밀번호가 발급 실패했습니다.');");
+				msg.append("history.go(-1)");
+			}
+		}
+		
+		
+		msg.append("</script>");
+		return msg.toString();
+	}
+	
+	//비밀번호 변경화면 요청
+	@RequestMapping("/changePassword")
+	public String change(HttpSession session) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginInfo");
+		if(vo==null) return "redirect:login";
+		else		 return "member/change";
+	}
+	
+	//현재비밀번호 확인 요청
+	@ResponseBody @RequestMapping("/confirmPassword")
+	public int confirm(String userpw, String userid) {
+		//화면에서 입력한 현재 비밀번호가 DB에 있는지 확인
+		MemberVO vo = service.member_info(userid);
+		return pwEncoder.matches(userpw, vo.getUserpw()) ? 0 : 1;
+	}
+	
+	//새비밀번호 변경저장 처리 요청
+	@ResponseBody @RequestMapping("/updatePassword")
+	public boolean update(MemberVO vo) {
+		//화면에서 입력한 새 비밀번호로 DB에 변경저장
+		vo.setUserpw(pwEncoder.encode(vo.getUserpw()));
+		return service.member_resetPassword(vo)==1 ? true : false;
+	}
+	
+	//로그아웃 처리 요청
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("loginInfo");
+		return "redirect:/";
+	}
+	
+	// id : yODCkg6qF78LHByNNKBN
+	// secret : hOyLABPxwo
+	
+	private String NAVER_ID = "yODCkg6qF78LHByNNKBN";
+	private String NAVER_SECRET = "hOyLABPxwo";
+	private String KAKAO_ID = "8d230b54a97dc8a92c5a160ca186023b";
+	
+	//네이버로그인처리 요청
+	@RequestMapping("/naverLogin")
+	public String naverLogin(HttpSession session, HttpServletRequest request) {
+		// 네이버 로그인 연동 URL 생성하기
+		// https://nid.naver.com/oauth2.0/authorize?response_type=code
+		// &client_id=CLIENT_ID
+		// &state=STATE_STRING
+		// &redirect_uri=CALLBACK_URL
+		String state = UUID.randomUUID().toString();
+		session.setAttribute("state", state);
+		
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/authorize?response_type=code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&state=").append(state);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/naverCallback");
+		// http://localhost:8080/smart/member/naverCallback
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoLogin")
+	public String kakaoLogin(HttpSession session, HttpServletRequest request) {
+		//https://kauth.kakao.com/oauth/authorize?response_type=code
+		//&client_id=${REST_API_KEY}
+		//&redirect_uri=${REDIRECT_URI}
+		StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/authorize?response_type=code");
+		url.append("&client_id=").append(KAKAO_ID);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/kakaoCallback");
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoCallback")
+	public String kakaoCallback(String code, String state, HttpSession session) {
+		curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+		 -H "Content-Type: application/x-www-form-urlencoded" \
+		 -d "grant_type=authorization_code" \
+		 -d "client_id=${REST_API_KEY}" \
+		 --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+		 -d "code=${AUTHORIZE_CODE}"
+		return "";
+	}
+	
+	// 네이버 콜백처리
+	@RequestMapping("/naverCallback")
+	public String naverCallback(String code, String state, HttpSession session) {
+		String storedState = (String) session.getAttribute("state");
+		if(code==null||!state.equals(state)) return "redirect:/";
+		
+		// 접근 토큰 발급 요청
+		// https://nid.naver.com/oauth2.0/token?grant_type=authorization_code
+		// &client_id=jyvqXeaVOVmV
+		// &client_secret=527300A0_COq1_XV33cf
+		// &code=EIc5bFrl4RibFls1
+		// &state=9kgsGTfH4j7IyAkg  
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/token?grant_type=authorization_code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&client_secret=").append(NAVER_SECRET);
+		url.append("&code=").append(code);
+		url.append("&state=").append(state);
+		
+		String response = common.requestAPI(url.toString());
+		// 문자열 --> JSON
+		JSONObject json = new JSONObject(response);
+		String token = json.getString("access_token");
+		String type = json.getString("token_type");
+		
+		// 접근 토큰을 이용하여 프로필 API 호출하기
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		response = common.requestAPI(url.toString(), type+" "+token);
+		json = new JSONObject(response);
+		if(json.getString("resultcode").equals("00")) {
+			json = json.getJSONObject("response");
+			MemberVO vo = new MemberVO();
+			vo.setSocial("N"); //N:네이버, K:카카오
+			vo.setUserid(json.getString("id"));
+			// 별칭이 있으면 별칭을, 없으면 이름을 name 필드에 담자
+			vo.setName(hasKey(json, "nickname"));
+			if(vo.getName().isEmpty()) {
+				vo.setName(hasKey(json, "name", "아무개"));
+			}
+			vo.setEmail(hasKey(json, "email"));
+			vo.setProfile(hasKey(json, "profile_image"));
+			vo.setGender(hasKey(json, "gender", "F").equals("M") ? "남" : "여"); // M/F --> 남/여
+			vo.setPhone(hasKey(json, "mobile"));
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		}
+		/*
+		{
+			  "resultcode": "00",
+			  "message": "success",
+			  "response": {
+			    "email": "openapi@naver.com",
+			    "nickname": "OpenAPI",
+			    "profile_image": "https://ssl.pstatic.net/static/pwe/address/nodata_33x33.gif",
+			    "age": "40-49",
+			    "gender": "F",
+			    "id": "32742776",
+			    "name": "오픈 API",
+			    "birthday": "10-01"
+			  }
+			}
+		*/
+		
+		return "redirect:/";
+	}
+	
+	private String hasKey(JSONObject json, String key) {
+		return json.has(key) ? json.getString(key) : "";
+	}
+	
+	//기본값을 지정해야 하는 이유
+	private String hasKey(JSONObject json, String key, String value) {
+		return json.has(key) ? json.getString(key) : value;
+	}
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2023-06-20 08:53:12.898
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2023-06-20 08:53:12.898
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-20 08:53:12.954
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package kr.co.smart;
+
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import smart.common.CommonUtility;
+import smart.member.MemberDAO;
+import smart.member.MemberVO;
+
+@Controller @RequestMapping("/member")
+public class MemberController {
+	@Autowired private MemberDAO service;
+	@Autowired private BCryptPasswordEncoder pwEncoder;
+	
+	//로그인화면 요청
+	@RequestMapping("/login")
+	public String login(HttpSession session) {
+		session.setAttribute("category", "login");
+		return "default/member/login";
+	}
+	
+	// 로그인처리 요청
+	@RequestMapping(value="/smartLogin")
+	public String login(String userid, String userpw, 
+						HttpSession session, HttpServletRequest request,
+						RedirectAttributes redirect) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		if(match) {
+			session.setAttribute("loginInfo", vo);
+			return "redirect:/";
+		}else {
+			redirect.addFlashAttribute("fail", true);
+			return "redirect:login"; //로그인화면 다시 요청
+		}
+	}
+	
+	/*
+	@ResponseBody @RequestMapping(value="/smartLogin", produces="text/html; charset=utf-8")
+	public String login(String userid, String userpw, HttpSession session, HttpServletRequest request) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		
+		StringBuffer msg = new StringBuffer("<script>");
+		if(match) {
+			//로그인되는 경우
+			session.setAttribute("loginInfo", vo); //세션에 로그인한 회원정보 담기
+			msg.append("location='")
+				.append(common.appURL(request))
+				.append("'");
+		}else {
+		//로그인되지 않는 경우
+			msg.append("alert('아이디나 비밀번호가 일치하지 않습니다!'); history.go(-1);");
+		}
+		msg.append("</script>");
+		return msg.toString();
+	}
+	*/
+	
+	@Autowired private CommonUtility common;
+	
+	//비밀번호 찾기 화면 요청
+	@RequestMapping("/findPassword")
+	public String find() {
+		return "default/member/find";
+	}
+	
+	//비밀번호 찾기 처리 요청
+	@ResponseBody @RequestMapping(value="/resetPassword", produces="text/html; charset=utf-8")
+	public String reset(MemberVO vo) {
+		// 화면에서 입력한 아이디/이메일이 일치하는 회원에게 임시 비번을 발급한다.
+		String name = service.member_userid_email(vo);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(name==null) {
+			msg.append("alert('아이디나 이메일이 맞지 않습니다. \\n확인하세요!');");
+			msg.append("location='findPassword'");
+		}else {
+			vo.setName(name);
+			// 임시 비번을 생성한 후 DB의 회원정보로 저장 임시비번을 이메일로 보내준다.
+			String pw = UUID.randomUUID().toString(); // sfda231-564asfd-sfda645
+			pw = pw.substring(pw.lastIndexOf("-")+1); //sfda645
+			vo.setUserpw(pwEncoder.encode(pw)); //암호화된 임시비번
+			
+			if(service.member_resetPassword(vo)==1 && common.sendPassword(vo, pw)) {
+				msg.append("alert('임시 비밀번호가 발급되었습니다. \\n이메일을 확인하세요');");
+				msg.append("location='login'"); //임시비번으로 로그인하도록 로그인화면 연결
+			}else {
+				msg.append("alert('임시 비밀번호가 발급 실패했습니다.');");
+				msg.append("history.go(-1)");
+			}
+		}
+		
+		
+		msg.append("</script>");
+		return msg.toString();
+	}
+	
+	//비밀번호 변경화면 요청
+	@RequestMapping("/changePassword")
+	public String change(HttpSession session) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginInfo");
+		if(vo==null) return "redirect:login";
+		else		 return "member/change";
+	}
+	
+	//현재비밀번호 확인 요청
+	@ResponseBody @RequestMapping("/confirmPassword")
+	public int confirm(String userpw, String userid) {
+		//화면에서 입력한 현재 비밀번호가 DB에 있는지 확인
+		MemberVO vo = service.member_info(userid);
+		return pwEncoder.matches(userpw, vo.getUserpw()) ? 0 : 1;
+	}
+	
+	//새비밀번호 변경저장 처리 요청
+	@ResponseBody @RequestMapping("/updatePassword")
+	public boolean update(MemberVO vo) {
+		//화면에서 입력한 새 비밀번호로 DB에 변경저장
+		vo.setUserpw(pwEncoder.encode(vo.getUserpw()));
+		return service.member_resetPassword(vo)==1 ? true : false;
+	}
+	
+	//로그아웃 처리 요청
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("loginInfo");
+		return "redirect:/";
+	}
+	
+	// id : yODCkg6qF78LHByNNKBN
+	// secret : hOyLABPxwo
+	
+	private String NAVER_ID = "yODCkg6qF78LHByNNKBN";
+	private String NAVER_SECRET = "hOyLABPxwo";
+	private String KAKAO_ID = "8d230b54a97dc8a92c5a160ca186023b";
+	
+	//네이버로그인처리 요청
+	@RequestMapping("/naverLogin")
+	public String naverLogin(HttpSession session, HttpServletRequest request) {
+		// 네이버 로그인 연동 URL 생성하기
+		// https://nid.naver.com/oauth2.0/authorize?response_type=code
+		// &client_id=CLIENT_ID
+		// &state=STATE_STRING
+		// &redirect_uri=CALLBACK_URL
+		String state = UUID.randomUUID().toString();
+		session.setAttribute("state", state);
+		
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/authorize?response_type=code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&state=").append(state);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/naverCallback");
+		// http://localhost:8080/smart/member/naverCallback
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoLogin")
+	public String kakaoLogin(HttpSession session, HttpServletRequest request) {
+		//https://kauth.kakao.com/oauth/authorize?response_type=code
+		//&client_id=${REST_API_KEY}
+		//&redirect_uri=${REDIRECT_URI}
+		StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/authorize?response_type=code");
+		url.append("&client_id=").append(KAKAO_ID);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/kakaoCallback");
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoCallback")
+	public String kakaoCallback(String code, String state, HttpSession session) {
+		curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+		 -H "Content-Type: application/x-www-form-urlencoded" \
+		 -d "grant_type=authorization_code" \
+		 -d "client_id=${REST_API_KEY}" \
+		 --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+		 -d "code=${AUTHORIZE_CODE}"
+		return "";
+	}
+	
+	// 네이버 콜백처리
+	@RequestMapping("/naverCallback")
+	public String naverCallback(String code, String state, HttpSession session) {
+		String storedState = (String) session.getAttribute("state");
+		if(code==null||!state.equals(state)) return "redirect:/";
+		
+		// 접근 토큰 발급 요청
+		// https://nid.naver.com/oauth2.0/token?grant_type=authorization_code
+		// &client_id=jyvqXeaVOVmV
+		// &client_secret=527300A0_COq1_XV33cf
+		// &code=EIc5bFrl4RibFls1
+		// &state=9kgsGTfH4j7IyAkg  
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/token?grant_type=authorization_code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&client_secret=").append(NAVER_SECRET);
+		url.append("&code=").append(code);
+		url.append("&state=").append(state);
+		
+		String response = common.requestAPI(url.toString());
+		// 문자열 --> JSON
+		JSONObject json = new JSONObject(response);
+		String token = json.getString("access_token");
+		String type = json.getString("token_type");
+		
+		// 접근 토큰을 이용하여 프로필 API 호출하기
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		response = common.requestAPI(url.toString(), type+" "+token);
+		json = new JSONObject(response);
+		if(json.getString("resultcode").equals("00")) {
+			json = json.getJSONObject("response");
+			MemberVO vo = new MemberVO();
+			vo.setSocial("N"); //N:네이버, K:카카오
+			vo.setUserid(json.getString("id"));
+			// 별칭이 있으면 별칭을, 없으면 이름을 name 필드에 담자
+			vo.setName(hasKey(json, "nickname"));
+			if(vo.getName().isEmpty()) {
+				vo.setName(hasKey(json, "name", "아무개"));
+			}
+			vo.setEmail(hasKey(json, "email"));
+			vo.setProfile(hasKey(json, "profile_image"));
+			vo.setGender(hasKey(json, "gender", "F").equals("M") ? "남" : "여"); // M/F --> 남/여
+			vo.setPhone(hasKey(json, "mobile"));
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		}
+		/*
+		{
+			  "resultcode": "00",
+			  "message": "success",
+			  "response": {
+			    "email": "openapi@naver.com",
+			    "nickname": "OpenAPI",
+			    "profile_image": "https://ssl.pstatic.net/static/pwe/address/nodata_33x33.gif",
+			    "age": "40-49",
+			    "gender": "F",
+			    "id": "32742776",
+			    "name": "오픈 API",
+			    "birthday": "10-01"
+			  }
+			}
+		*/
+		
+		return "redirect:/";
+	}
+	
+	private String hasKey(JSONObject json, String key) {
+		return json.has(key) ? json.getString(key) : "";
+	}
+	
+	//기본값을 지정해야 하는 이유
+	private String hasKey(JSONObject json, String key, String value) {
+		return json.has(key) ? json.getString(key) : value;
+	}
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2023-06-20 08:53:12.955
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2023-06-20 08:53:12.955
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-20 08:53:14.379
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package kr.co.smart;
+
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import smart.common.CommonUtility;
+import smart.member.MemberDAO;
+import smart.member.MemberVO;
+
+@Controller @RequestMapping("/member")
+public class MemberController {
+	@Autowired private MemberDAO service;
+	@Autowired private BCryptPasswordEncoder pwEncoder;
+	
+	//로그인화면 요청
+	@RequestMapping("/login")
+	public String login(HttpSession session) {
+		session.setAttribute("category", "login");
+		return "default/member/login";
+	}
+	
+	// 로그인처리 요청
+	@RequestMapping(value="/smartLogin")
+	public String login(String userid, String userpw, 
+						HttpSession session, HttpServletRequest request,
+						RedirectAttributes redirect) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		if(match) {
+			session.setAttribute("loginInfo", vo);
+			return "redirect:/";
+		}else {
+			redirect.addFlashAttribute("fail", true);
+			return "redirect:login"; //로그인화면 다시 요청
+		}
+	}
+	
+	/*
+	@ResponseBody @RequestMapping(value="/smartLogin", produces="text/html; charset=utf-8")
+	public String login(String userid, String userpw, HttpSession session, HttpServletRequest request) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		
+		StringBuffer msg = new StringBuffer("<script>");
+		if(match) {
+			//로그인되는 경우
+			session.setAttribute("loginInfo", vo); //세션에 로그인한 회원정보 담기
+			msg.append("location='")
+				.append(common.appURL(request))
+				.append("'");
+		}else {
+		//로그인되지 않는 경우
+			msg.append("alert('아이디나 비밀번호가 일치하지 않습니다!'); history.go(-1);");
+		}
+		msg.append("</script>");
+		return msg.toString();
+	}
+	*/
+	
+	@Autowired private CommonUtility common;
+	
+	//비밀번호 찾기 화면 요청
+	@RequestMapping("/findPassword")
+	public String find() {
+		return "default/member/find";
+	}
+	
+	//비밀번호 찾기 처리 요청
+	@ResponseBody @RequestMapping(value="/resetPassword", produces="text/html; charset=utf-8")
+	public String reset(MemberVO vo) {
+		// 화면에서 입력한 아이디/이메일이 일치하는 회원에게 임시 비번을 발급한다.
+		String name = service.member_userid_email(vo);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(name==null) {
+			msg.append("alert('아이디나 이메일이 맞지 않습니다. \\n확인하세요!');");
+			msg.append("location='findPassword'");
+		}else {
+			vo.setName(name);
+			// 임시 비번을 생성한 후 DB의 회원정보로 저장 임시비번을 이메일로 보내준다.
+			String pw = UUID.randomUUID().toString(); // sfda231-564asfd-sfda645
+			pw = pw.substring(pw.lastIndexOf("-")+1); //sfda645
+			vo.setUserpw(pwEncoder.encode(pw)); //암호화된 임시비번
+			
+			if(service.member_resetPassword(vo)==1 && common.sendPassword(vo, pw)) {
+				msg.append("alert('임시 비밀번호가 발급되었습니다. \\n이메일을 확인하세요');");
+				msg.append("location='login'"); //임시비번으로 로그인하도록 로그인화면 연결
+			}else {
+				msg.append("alert('임시 비밀번호가 발급 실패했습니다.');");
+				msg.append("history.go(-1)");
+			}
+		}
+		
+		
+		msg.append("</script>");
+		return msg.toString();
+	}
+	
+	//비밀번호 변경화면 요청
+	@RequestMapping("/changePassword")
+	public String change(HttpSession session) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginInfo");
+		if(vo==null) return "redirect:login";
+		else		 return "member/change";
+	}
+	
+	//현재비밀번호 확인 요청
+	@ResponseBody @RequestMapping("/confirmPassword")
+	public int confirm(String userpw, String userid) {
+		//화면에서 입력한 현재 비밀번호가 DB에 있는지 확인
+		MemberVO vo = service.member_info(userid);
+		return pwEncoder.matches(userpw, vo.getUserpw()) ? 0 : 1;
+	}
+	
+	//새비밀번호 변경저장 처리 요청
+	@ResponseBody @RequestMapping("/updatePassword")
+	public boolean update(MemberVO vo) {
+		//화면에서 입력한 새 비밀번호로 DB에 변경저장
+		vo.setUserpw(pwEncoder.encode(vo.getUserpw()));
+		return service.member_resetPassword(vo)==1 ? true : false;
+	}
+	
+	//로그아웃 처리 요청
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("loginInfo");
+		return "redirect:/";
+	}
+	
+	// id : yODCkg6qF78LHByNNKBN
+	// secret : hOyLABPxwo
+	
+	private String NAVER_ID = "yODCkg6qF78LHByNNKBN";
+	private String NAVER_SECRET = "hOyLABPxwo";
+	private String KAKAO_ID = "8d230b54a97dc8a92c5a160ca186023b";
+	
+	//네이버로그인처리 요청
+	@RequestMapping("/naverLogin")
+	public String naverLogin(HttpSession session, HttpServletRequest request) {
+		// 네이버 로그인 연동 URL 생성하기
+		// https://nid.naver.com/oauth2.0/authorize?response_type=code
+		// &client_id=CLIENT_ID
+		// &state=STATE_STRING
+		// &redirect_uri=CALLBACK_URL
+		String state = UUID.randomUUID().toString();
+		session.setAttribute("state", state);
+		
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/authorize?response_type=code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&state=").append(state);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/naverCallback");
+		// http://localhost:8080/smart/member/naverCallback
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoLogin")
+	public String kakaoLogin(HttpSession session, HttpServletRequest request) {
+		//https://kauth.kakao.com/oauth/authorize?response_type=code
+		//&client_id=${REST_API_KEY}
+		//&redirect_uri=${REDIRECT_URI}
+		StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/authorize?response_type=code");
+		url.append("&client_id=").append(KAKAO_ID);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/kakaoCallback");
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoCallback")
+	public String kakaoCallback(String code, String state, HttpSession session) {
+		curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+		 -H "Content-Type: application/x-www-form-urlencoded" \
+		 -d "grant_type=authorization_code" \
+		 -d "client_id=${REST_API_KEY}" \
+		 --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+		 -d "code=${AUTHORIZE_CODE}"
+		return "";
+	}
+	
+	// 네이버 콜백처리
+	@RequestMapping("/naverCallback")
+	public String naverCallback(String code, String state, HttpSession session) {
+		String storedState = (String) session.getAttribute("state");
+		if(code==null||!state.equals(state)) return "redirect:/";
+		
+		// 접근 토큰 발급 요청
+		// https://nid.naver.com/oauth2.0/token?grant_type=authorization_code
+		// &client_id=jyvqXeaVOVmV
+		// &client_secret=527300A0_COq1_XV33cf
+		// &code=EIc5bFrl4RibFls1
+		// &state=9kgsGTfH4j7IyAkg  
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/token?grant_type=authorization_code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&client_secret=").append(NAVER_SECRET);
+		url.append("&code=").append(code);
+		url.append("&state=").append(state);
+		
+		String response = common.requestAPI(url.toString());
+		// 문자열 --> JSON
+		JSONObject json = new JSONObject(response);
+		String token = json.getString("access_token");
+		String type = json.getString("token_type");
+		
+		// 접근 토큰을 이용하여 프로필 API 호출하기
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		response = common.requestAPI(url.toString(), type+" "+token);
+		json = new JSONObject(response);
+		if(json.getString("resultcode").equals("00")) {
+			json = json.getJSONObject("response");
+			MemberVO vo = new MemberVO();
+			vo.setSocial("N"); //N:네이버, K:카카오
+			vo.setUserid(json.getString("id"));
+			// 별칭이 있으면 별칭을, 없으면 이름을 name 필드에 담자
+			vo.setName(hasKey(json, "nickname"));
+			if(vo.getName().isEmpty()) {
+				vo.setName(hasKey(json, "name", "아무개"));
+			}
+			vo.setEmail(hasKey(json, "email"));
+			vo.setProfile(hasKey(json, "profile_image"));
+			vo.setGender(hasKey(json, "gender", "F").equals("M") ? "남" : "여"); // M/F --> 남/여
+			vo.setPhone(hasKey(json, "mobile"));
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		}
+		/*
+		{
+			  "resultcode": "00",
+			  "message": "success",
+			  "response": {
+			    "email": "openapi@naver.com",
+			    "nickname": "OpenAPI",
+			    "profile_image": "https://ssl.pstatic.net/static/pwe/address/nodata_33x33.gif",
+			    "age": "40-49",
+			    "gender": "F",
+			    "id": "32742776",
+			    "name": "오픈 API",
+			    "birthday": "10-01"
+			  }
+			}
+		*/
+		
+		return "redirect:/";
+	}
+	
+	private String hasKey(JSONObject json, String key) {
+		return json.has(key) ? json.getString(key) : "";
+	}
+	
+	//기본값을 지정해야 하는 이유
+	private String hasKey(JSONObject json, String key, String value) {
+		return json.has(key) ? json.getString(key) : value;
+	}
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2023-06-20 08:53:14.380
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2023-06-20 08:53:14.380
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-20 08:53:33.255
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package kr.co.smart;
+
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import smart.common.CommonUtility;
+import smart.member.MemberDAO;
+import smart.member.MemberVO;
+
+@Controller @RequestMapping("/member")
+public class MemberController {
+	@Autowired private MemberDAO service;
+	@Autowired private BCryptPasswordEncoder pwEncoder;
+	
+	//로그인화면 요청
+	@RequestMapping("/login")
+	public String login(HttpSession session) {
+		session.setAttribute("category", "login");
+		return "default/member/login";
+	}
+	
+	// 로그인처리 요청
+	@RequestMapping(value="/smartLogin")
+	public String login(String userid, String userpw, 
+						HttpSession session, HttpServletRequest request,
+						RedirectAttributes redirect) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		if(match) {
+			session.setAttribute("loginInfo", vo);
+			return "redirect:/";
+		}else {
+			redirect.addFlashAttribute("fail", true);
+			return "redirect:login"; //로그인화면 다시 요청
+		}
+	}
+	
+	/*
+	@ResponseBody @RequestMapping(value="/smartLogin", produces="text/html; charset=utf-8")
+	public String login(String userid, String userpw, HttpSession session, HttpServletRequest request) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		
+		StringBuffer msg = new StringBuffer("<script>");
+		if(match) {
+			//로그인되는 경우
+			session.setAttribute("loginInfo", vo); //세션에 로그인한 회원정보 담기
+			msg.append("location='")
+				.append(common.appURL(request))
+				.append("'");
+		}else {
+		//로그인되지 않는 경우
+			msg.append("alert('아이디나 비밀번호가 일치하지 않습니다!'); history.go(-1);");
+		}
+		msg.append("</script>");
+		return msg.toString();
+	}
+	*/
+	
+	@Autowired private CommonUtility common;
+	
+	//비밀번호 찾기 화면 요청
+	@RequestMapping("/findPassword")
+	public String find() {
+		return "default/member/find";
+	}
+	
+	//비밀번호 찾기 처리 요청
+	@ResponseBody @RequestMapping(value="/resetPassword", produces="text/html; charset=utf-8")
+	public String reset(MemberVO vo) {
+		// 화면에서 입력한 아이디/이메일이 일치하는 회원에게 임시 비번을 발급한다.
+		String name = service.member_userid_email(vo);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(name==null) {
+			msg.append("alert('아이디나 이메일이 맞지 않습니다. \\n확인하세요!');");
+			msg.append("location='findPassword'");
+		}else {
+			vo.setName(name);
+			// 임시 비번을 생성한 후 DB의 회원정보로 저장 임시비번을 이메일로 보내준다.
+			String pw = UUID.randomUUID().toString(); // sfda231-564asfd-sfda645
+			pw = pw.substring(pw.lastIndexOf("-")+1); //sfda645
+			vo.setUserpw(pwEncoder.encode(pw)); //암호화된 임시비번
+			
+			if(service.member_resetPassword(vo)==1 && common.sendPassword(vo, pw)) {
+				msg.append("alert('임시 비밀번호가 발급되었습니다. \\n이메일을 확인하세요');");
+				msg.append("location='login'"); //임시비번으로 로그인하도록 로그인화면 연결
+			}else {
+				msg.append("alert('임시 비밀번호가 발급 실패했습니다.');");
+				msg.append("history.go(-1)");
+			}
+		}
+		
+		
+		msg.append("</script>");
+		return msg.toString();
+	}
+	
+	//비밀번호 변경화면 요청
+	@RequestMapping("/changePassword")
+	public String change(HttpSession session) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginInfo");
+		if(vo==null) return "redirect:login";
+		else		 return "member/change";
+	}
+	
+	//현재비밀번호 확인 요청
+	@ResponseBody @RequestMapping("/confirmPassword")
+	public int confirm(String userpw, String userid) {
+		//화면에서 입력한 현재 비밀번호가 DB에 있는지 확인
+		MemberVO vo = service.member_info(userid);
+		return pwEncoder.matches(userpw, vo.getUserpw()) ? 0 : 1;
+	}
+	
+	//새비밀번호 변경저장 처리 요청
+	@ResponseBody @RequestMapping("/updatePassword")
+	public boolean update(MemberVO vo) {
+		//화면에서 입력한 새 비밀번호로 DB에 변경저장
+		vo.setUserpw(pwEncoder.encode(vo.getUserpw()));
+		return service.member_resetPassword(vo)==1 ? true : false;
+	}
+	
+	//로그아웃 처리 요청
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("loginInfo");
+		return "redirect:/";
+	}
+	
+	// id : yODCkg6qF78LHByNNKBN
+	// secret : hOyLABPxwo
+	
+	private String NAVER_ID = "yODCkg6qF78LHByNNKBN";
+	private String NAVER_SECRET = "hOyLABPxwo";
+	private String KAKAO_ID = "8d230b54a97dc8a92c5a160ca186023b";
+	
+	//네이버로그인처리 요청
+	@RequestMapping("/naverLogin")
+	public String naverLogin(HttpSession session, HttpServletRequest request) {
+		// 네이버 로그인 연동 URL 생성하기
+		// https://nid.naver.com/oauth2.0/authorize?response_type=code
+		// &client_id=CLIENT_ID
+		// &state=STATE_STRING
+		// &redirect_uri=CALLBACK_URL
+		String state = UUID.randomUUID().toString();
+		session.setAttribute("state", state);
+		
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/authorize?response_type=code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&state=").append(state);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/naverCallback");
+		// http://localhost:8080/smart/member/naverCallback
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoLogin")
+	public String kakaoLogin(HttpSession session, HttpServletRequest request) {
+		//https://kauth.kakao.com/oauth/authorize?response_type=code
+		//&client_id=${REST_API_KEY}
+		//&redirect_uri=${REDIRECT_URI}
+		StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/authorize?response_type=code");
+		url.append("&client_id=").append(KAKAO_ID);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/kakaoCallback");
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoCallback")
+	public String kakaoCallback(String code, String state, HttpSession session) {
+		curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+		 -H "Content-Type: application/x-www-form-urlencoded" \
+		 -d "grant_type=authorization_code" \
+		 -d "client_id=${REST_API_KEY}" \
+		 --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+		 -d "code=${AUTHORIZE_CODE}"
+		return "";
+	}
+	
+	// 네이버 콜백처리
+	@RequestMapping("/naverCallback")
+	public String naverCallback(String code, String state, HttpSession session) {
+		String storedState = (String) session.getAttribute("state");
+		if(code==null||!state.equals(state)) return "redirect:/";
+		
+		// 접근 토큰 발급 요청
+		// https://nid.naver.com/oauth2.0/token?grant_type=authorization_code
+		// &client_id=jyvqXeaVOVmV
+		// &client_secret=527300A0_COq1_XV33cf
+		// &code=EIc5bFrl4RibFls1
+		// &state=9kgsGTfH4j7IyAkg  
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/token?grant_type=authorization_code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&client_secret=").append(NAVER_SECRET);
+		url.append("&code=").append(code);
+		url.append("&state=").append(state);
+		
+		String response = common.requestAPI(url.toString());
+		// 문자열 --> JSON
+		JSONObject json = new JSONObject(response);
+		String token = json.getString("access_token");
+		String type = json.getString("token_type");
+		
+		// 접근 토큰을 이용하여 프로필 API 호출하기
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		response = common.requestAPI(url.toString(), type+" "+token);
+		json = new JSONObject(response);
+		if(json.getString("resultcode").equals("00")) {
+			json = json.getJSONObject("response");
+			MemberVO vo = new MemberVO();
+			vo.setSocial("N"); //N:네이버, K:카카오
+			vo.setUserid(json.getString("id"));
+			// 별칭이 있으면 별칭을, 없으면 이름을 name 필드에 담자
+			vo.setName(hasKey(json, "nickname"));
+			if(vo.getName().isEmpty()) {
+				vo.setName(hasKey(json, "name", "아무개"));
+			}
+			vo.setEmail(hasKey(json, "email"));
+			vo.setProfile(hasKey(json, "profile_image"));
+			vo.setGender(hasKey(json, "gender", "F").equals("M") ? "남" : "여"); // M/F --> 남/여
+			vo.setPhone(hasKey(json, "mobile"));
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		}
+		/*
+		{
+			  "resultcode": "00",
+			  "message": "success",
+			  "response": {
+			    "email": "openapi@naver.com",
+			    "nickname": "OpenAPI",
+			    "profile_image": "https://ssl.pstatic.net/static/pwe/address/nodata_33x33.gif",
+			    "age": "40-49",
+			    "gender": "F",
+			    "id": "32742776",
+			    "name": "오픈 API",
+			    "birthday": "10-01"
+			  }
+			}
+		*/
+		
+		return "redirect:/";
+	}
+	
+	private String hasKey(JSONObject json, String key) {
+		return json.has(key) ? json.getString(key) : "";
+	}
+	
+	//기본값을 지정해야 하는 이유
+	private String hasKey(JSONObject json, String key, String value) {
+		return json.has(key) ? json.getString(key) : value;
+	}
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2023-06-20 08:53:33.255
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2023-06-20 08:53:33.256
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-06-20 08:53:33.782
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package kr.co.smart;
+
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import smart.common.CommonUtility;
+import smart.member.MemberDAO;
+import smart.member.MemberVO;
+
+@Controller @RequestMapping("/member")
+public class MemberController {
+	@Autowired private MemberDAO service;
+	@Autowired private BCryptPasswordEncoder pwEncoder;
+	
+	//로그인화면 요청
+	@RequestMapping("/login")
+	public String login(HttpSession session) {
+		session.setAttribute("category", "login");
+		return "default/member/login";
+	}
+	
+	// 로그인처리 요청
+	@RequestMapping(value="/smartLogin")
+	public String login(String userid, String userpw, 
+						HttpSession session, HttpServletRequest request,
+						RedirectAttributes redirect) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		if(match) {
+			session.setAttribute("loginInfo", vo);
+			return "redirect:/";
+		}else {
+			redirect.addFlashAttribute("fail", true);
+			return "redirect:login"; //로그인화면 다시 요청
+		}
+	}
+	
+	/*
+	@ResponseBody @RequestMapping(value="/smartLogin", produces="text/html; charset=utf-8")
+	public String login(String userid, String userpw, HttpSession session, HttpServletRequest request) {
+		//화면에서 입력한 아이디, 비번이 일치하는 회원정보가 DB에 있는지 확인
+		//입력한 아이디에 해당하는 회원정보 조회
+		MemberVO vo = service.member_info(userid);
+		boolean match = false;
+		if(vo != null) { //아이디가 일치하는 회원정보가 있고
+			match = pwEncoder.matches(userpw, vo.getUserpw()); // 비번일치여부 확인
+		}
+		
+		StringBuffer msg = new StringBuffer("<script>");
+		if(match) {
+			//로그인되는 경우
+			session.setAttribute("loginInfo", vo); //세션에 로그인한 회원정보 담기
+			msg.append("location='")
+				.append(common.appURL(request))
+				.append("'");
+		}else {
+		//로그인되지 않는 경우
+			msg.append("alert('아이디나 비밀번호가 일치하지 않습니다!'); history.go(-1);");
+		}
+		msg.append("</script>");
+		return msg.toString();
+	}
+	*/
+	
+	@Autowired private CommonUtility common;
+	
+	//비밀번호 찾기 화면 요청
+	@RequestMapping("/findPassword")
+	public String find() {
+		return "default/member/find";
+	}
+	
+	//비밀번호 찾기 처리 요청
+	@ResponseBody @RequestMapping(value="/resetPassword", produces="text/html; charset=utf-8")
+	public String reset(MemberVO vo) {
+		// 화면에서 입력한 아이디/이메일이 일치하는 회원에게 임시 비번을 발급한다.
+		String name = service.member_userid_email(vo);
+		StringBuffer msg = new StringBuffer("<script>");
+		if(name==null) {
+			msg.append("alert('아이디나 이메일이 맞지 않습니다. \\n확인하세요!');");
+			msg.append("location='findPassword'");
+		}else {
+			vo.setName(name);
+			// 임시 비번을 생성한 후 DB의 회원정보로 저장 임시비번을 이메일로 보내준다.
+			String pw = UUID.randomUUID().toString(); // sfda231-564asfd-sfda645
+			pw = pw.substring(pw.lastIndexOf("-")+1); //sfda645
+			vo.setUserpw(pwEncoder.encode(pw)); //암호화된 임시비번
+			
+			if(service.member_resetPassword(vo)==1 && common.sendPassword(vo, pw)) {
+				msg.append("alert('임시 비밀번호가 발급되었습니다. \\n이메일을 확인하세요');");
+				msg.append("location='login'"); //임시비번으로 로그인하도록 로그인화면 연결
+			}else {
+				msg.append("alert('임시 비밀번호가 발급 실패했습니다.');");
+				msg.append("history.go(-1)");
+			}
+		}
+		
+		
+		msg.append("</script>");
+		return msg.toString();
+	}
+	
+	//비밀번호 변경화면 요청
+	@RequestMapping("/changePassword")
+	public String change(HttpSession session) {
+		MemberVO vo = (MemberVO)session.getAttribute("loginInfo");
+		if(vo==null) return "redirect:login";
+		else		 return "member/change";
+	}
+	
+	//현재비밀번호 확인 요청
+	@ResponseBody @RequestMapping("/confirmPassword")
+	public int confirm(String userpw, String userid) {
+		//화면에서 입력한 현재 비밀번호가 DB에 있는지 확인
+		MemberVO vo = service.member_info(userid);
+		return pwEncoder.matches(userpw, vo.getUserpw()) ? 0 : 1;
+	}
+	
+	//새비밀번호 변경저장 처리 요청
+	@ResponseBody @RequestMapping("/updatePassword")
+	public boolean update(MemberVO vo) {
+		//화면에서 입력한 새 비밀번호로 DB에 변경저장
+		vo.setUserpw(pwEncoder.encode(vo.getUserpw()));
+		return service.member_resetPassword(vo)==1 ? true : false;
+	}
+	
+	//로그아웃 처리 요청
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("loginInfo");
+		return "redirect:/";
+	}
+	
+	// id : yODCkg6qF78LHByNNKBN
+	// secret : hOyLABPxwo
+	
+	private String NAVER_ID = "yODCkg6qF78LHByNNKBN";
+	private String NAVER_SECRET = "hOyLABPxwo";
+	private String KAKAO_ID = "8d230b54a97dc8a92c5a160ca186023b";
+	
+	//네이버로그인처리 요청
+	@RequestMapping("/naverLogin")
+	public String naverLogin(HttpSession session, HttpServletRequest request) {
+		// 네이버 로그인 연동 URL 생성하기
+		// https://nid.naver.com/oauth2.0/authorize?response_type=code
+		// &client_id=CLIENT_ID
+		// &state=STATE_STRING
+		// &redirect_uri=CALLBACK_URL
+		String state = UUID.randomUUID().toString();
+		session.setAttribute("state", state);
+		
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/authorize?response_type=code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&state=").append(state);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/naverCallback");
+		// http://localhost:8080/smart/member/naverCallback
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoLogin")
+	public String kakaoLogin(HttpSession session, HttpServletRequest request) {
+		//https://kauth.kakao.com/oauth/authorize?response_type=code
+		//&client_id=${REST_API_KEY}
+		//&redirect_uri=${REDIRECT_URI}
+		StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/authorize?response_type=code");
+		url.append("&client_id=").append(KAKAO_ID);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/kakaoCallback");
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoCallback")
+	public String kakaoCallback(String code, String state, HttpSession session) {
+		curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+		 -H "Content-Type: application/x-www-form-urlencoded" \
+		 -d "grant_type=authorization_code" \
+		 -d "client_id=${REST_API_KEY}" \
+		 --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+		 -d "code=${AUTHORIZE_CODE}"
+		return "";
+	}
+	
+	// 네이버 콜백처리
+	@RequestMapping("/naverCallback")
+	public String naverCallback(String code, String state, HttpSession session) {
+		String storedState = (String) session.getAttribute("state");
+		if(code==null||!state.equals(state)) return "redirect:/";
+		
+		// 접근 토큰 발급 요청
+		// https://nid.naver.com/oauth2.0/token?grant_type=authorization_code
+		// &client_id=jyvqXeaVOVmV
+		// &client_secret=527300A0_COq1_XV33cf
+		// &code=EIc5bFrl4RibFls1
+		// &state=9kgsGTfH4j7IyAkg  
+		StringBuffer url = new StringBuffer(
+				"https://nid.naver.com/oauth2.0/token?grant_type=authorization_code");
+		url.append("&client_id=").append(NAVER_ID);
+		url.append("&client_secret=").append(NAVER_SECRET);
+		url.append("&code=").append(code);
+		url.append("&state=").append(state);
+		
+		String response = common.requestAPI(url.toString());
+		// 문자열 --> JSON
+		JSONObject json = new JSONObject(response);
+		String token = json.getString("access_token");
+		String type = json.getString("token_type");
+		
+		// 접근 토큰을 이용하여 프로필 API 호출하기
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		response = common.requestAPI(url.toString(), type+" "+token);
+		json = new JSONObject(response);
+		if(json.getString("resultcode").equals("00")) {
+			json = json.getJSONObject("response");
+			MemberVO vo = new MemberVO();
+			vo.setSocial("N"); //N:네이버, K:카카오
+			vo.setUserid(json.getString("id"));
+			// 별칭이 있으면 별칭을, 없으면 이름을 name 필드에 담자
+			vo.setName(hasKey(json, "nickname"));
+			if(vo.getName().isEmpty()) {
+				vo.setName(hasKey(json, "name", "아무개"));
+			}
+			vo.setEmail(hasKey(json, "email"));
+			vo.setProfile(hasKey(json, "profile_image"));
+			vo.setGender(hasKey(json, "gender", "F").equals("M") ? "남" : "여"); // M/F --> 남/여
+			vo.setPhone(hasKey(json, "mobile"));
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		}
+		/*
+		{
+			  "resultcode": "00",
+			  "message": "success",
+			  "response": {
+			    "email": "openapi@naver.com",
+			    "nickname": "OpenAPI",
+			    "profile_image": "https://ssl.pstatic.net/static/pwe/address/nodata_33x33.gif",
+			    "age": "40-49",
+			    "gender": "F",
+			    "id": "32742776",
+			    "name": "오픈 API",
+			    "birthday": "10-01"
+			  }
+			}
+		*/
+		
+		return "redirect:/";
+	}
+	
+	private String hasKey(JSONObject json, String key) {
+		return json.has(key) ? json.getString(key) : "";
+	}
+	
+	//기본값을 지정해야 하는 이유
+	private String hasKey(JSONObject json, String key, String value) {
+		return json.has(key) ? json.getString(key) : value;
+	}
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2023-06-20 08:53:33.783
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2023-06-20 08:53:33.783
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 08:54:21.654
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:54:21.657
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:54:21.662
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 08:56:37.513
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:56:37.515
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:56:37.562
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 08:56:38.634
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:56:38.636
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:56:38.639
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 08:59:39.160
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:59:39.162
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 08:59:39.164
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:00:13.186
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:00:13.188
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:00:13.191
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:00:19.829
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:00:19.833
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:00:19.836
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:00:39.936
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:00:39.938
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:00:39.940
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:02:45.119
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:02:45.120
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:02:45.123
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:03:54.904
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:03:54.906
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:03:54.908
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:05:08.544
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:05:08.546
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:05:08.550
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:14:05.447
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:14:05.449
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:14:05.468
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:23:36.319
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:23:36.322
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:23:36.325
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:23:46.668
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:23:46.670
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:23:46.674
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:24:26.191
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:24:26.193
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:24:26.195
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:24:45.125
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:24:45.129
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:24:45.132
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:25:28.438
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:25:28.440
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:25:28.442
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:25:39.234
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:25:39.235
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:25:39.237
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:26:03.112
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:26:03.114
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:26:03.118
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:26:17.870
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:26:17.871
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:26:17.874
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 4 0 2023-06-20 09:26:33.262
+!MESSAGE /org/springframework/beans/factory/xml/spring-beans.dtd
+!STACK 0
+java.io.FileNotFoundException: /org/springframework/beans/factory/xml/spring-beans.dtd
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1099)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:115)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:240)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:37)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:263)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.createURI(XMLCatalogs.java:139)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.lambda$3(XMLCatalogs.java:69)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getWTPExtensionCatalog(XMLCatalogs.java:65)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLCatalogs.getAllCatalogs(XMLCatalogs.java:52)
+	at org.eclipse.wildwebdeveloper.xml.internal.ui.preferences.XMLPreferenceConstants.storePreferencesToLemminxOptions(XMLPreferenceConstants.java:90)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.mergeCustomInitializationOptions(XMLLanguageServer.java:163)
+	at org.eclipse.wildwebdeveloper.xml.internal.XMLLanguageServer.getInitializationOptions(XMLLanguageServer.java:158)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$8(LanguageServerWrapper.java:353)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1705)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:31:54.931
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:31:54.933
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:31:54.937
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:32:09.850
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:32:09.853
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:32:09.857
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 09:32:34.399
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:32:34.401
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 09:32:34.403
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:10:43.675
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:10:43.785
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:10:43.808
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:12:27.913
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:12:27.915
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:12:27.917
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:12:36.725
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:12:36.727
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:12:36.730
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:17:58.702
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:17:58.704
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:17:58.707
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:21:04.255
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:21:04.257
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:21:04.259
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:24:02.211
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:24:02.213
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:24:02.216
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:24:15.811
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:24:15.812
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:24:15.815
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:35:05.935
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:35:05.937
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:35:05.940
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:37:47.389
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:37:47.391
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:37:47.394
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:39:11.674
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:39:11.675
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:39:11.678
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:43:21.626
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:43:21.628
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:43:21.630
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:45:24.738
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:45:24.740
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:45:24.743
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:47:26.967
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:47:26.969
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:47:26.972
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:48:29.125
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:48:29.127
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:48:29.131
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:48:58.617
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:48:58.620
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:48:58.622
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:49:16.433
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:49:16.435
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:49:16.437
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:49:40.030
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:49:40.032
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:49:40.035
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 14:50:58.921
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:50:58.922
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 14:50:58.925
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:15:14.190
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:15:14.192
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:15:14.195
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:19:26.444
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:19:26.446
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:19:26.448
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:19:30.581
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:19:30.582
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:19:30.584
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:19:38.038
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:19:38.040
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:19:38.044
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:27:29.535
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:27:29.536
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:27:29.539
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:37:57.614
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:37:57.615
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:37:57.617
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 15:38:53.139
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:38:53.145
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 15:38:53.147
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 16:07:30.529
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 16:07:30.531
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 16:07:30.534
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:07:17.025
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:07:17.030
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:07:17.034
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:10:06.186
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:10:06.187
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:10:06.190
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:10:14.698
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:10:14.700
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:10:14.703
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:10:38.783
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:10:38.785
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:10:38.788
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:13:07.543
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:13:07.544
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:13:07.547
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:15:26.444
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:15:26.445
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:15:26.447
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:23:43.024
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:23:43.025
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:23:43.028
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:25:09.263
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:25:09.265
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:25:09.269
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:25:13.281
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:25:13.284
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:25:13.287
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:31:03.683
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:31:03.684
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:31:03.688
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:32:55.182
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:32:55.183
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:32:55.187
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:33:15.131
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:33:15.133
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:33:15.136
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:41:28.155
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:41:28.156
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:41:28.160
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:43:54.129
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:43:54.131
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:43:54.133
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:44:12.532
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:12.534
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:12.535
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:44:14.466
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:14.469
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:14.488
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:44:17.938
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:17.940
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:17.942
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:44:27.066
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:27.068
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:44:27.072
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:45:40.970
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:45:40.971
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:45:40.992
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:46:05.092
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:46:05.095
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:46:05.098
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:50:38.033
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:50:38.035
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:50:38.038
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-20 17:53:18.769
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:53:18.796
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-20 17:53:18.800
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!

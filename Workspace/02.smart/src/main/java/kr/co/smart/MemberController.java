@@ -141,9 +141,22 @@ public class MemberController {
 	
 	//로그아웃 처리 요청
 	@RequestMapping("/logout")
-	public String logout(HttpSession session) {
+	public String logout(HttpSession session, HttpServletRequest request) {
+		MemberVO login = (MemberVO)session.getAttribute("loginInfo");
 		session.removeAttribute("loginInfo");
-		return "redirect:/";
+		String social = login.getSocial();
+		if(social!=null&&social.equals("K")) {
+			//curl -v -X GET "https://kauth.kakao.com/oauth/logout
+			//?client_id=${YOUR_REST_API_KEY}
+			//&logout_redirect_uri=${YOUR_LOGOUT_REDIRECT_URI}"
+			StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/logout");
+			url.append("?client_id=").append(KAKAO_ID);
+			url.append("&logout_redirect_uri=").append(common.appURL(null));
+			return "redirect:"+url.toString();
+		}else {
+			return "redirect:/";
+		}
+		
 	}
 	
 	// id : yODCkg6qF78LHByNNKBN
@@ -173,6 +186,74 @@ public class MemberController {
 		return "redirect:"+url.toString();
 	}
 	
+	@RequestMapping("/kakaoLogin")
+	public String kakaoLogin(HttpServletRequest request) {
+		//인가 코드 받기
+		//https://kauth.kakao.com/oauth/authorize?response_type=code
+		//&client_id=${REST_API_KEY}
+		//&redirect_uri=${REDIRECT_URI}
+		StringBuffer url = new StringBuffer("https://kauth.kakao.com/oauth/authorize?response_type=code");
+		url.append("&client_id=").append(KAKAO_ID);
+		url.append("&redirect_uri=").append(common.appURL(request)).append("/member/kakaoCallback");
+		return "redirect:"+url.toString();
+	}
+	
+	@RequestMapping("/kakaoCallback")
+	public String kakaoCallback(String code, HttpSession session) {
+		if( code==null ) return "redirect:/";
+		StringBuffer url = new StringBuffer(
+				"https://kauth.kakao.com/oauth/token?grant_type=authorization_code");
+		url.append("&client_id=").append( KAKAO_ID );
+		url.append("&code=").append( code );
+		String response = common.requestAPI( url.toString() );
+		//문자열 --> JSON 
+		JSONObject json = new JSONObject( response );
+		String token_type = json.getString("token_type");
+		String access_token = json.getString("access_token");
+		
+//		curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+//		 -H "Content-Type: application/x-www-form-urlencoded" \
+//		 -d "grant_type=authorization_code" \
+//		 -d "client_id=${REST_API_KEY}" \
+//		 --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+//		 -d "code=${AUTHORIZE_CODE}"
+		
+		url = new StringBuffer("https://kapi.kakao.com/v2/user/me");
+//		common.requestAPI(url.toString(), "Bearer "+ access_token);
+		json = new JSONObject( common.requestAPI(url.toString(), token_type + " "+ access_token) );
+		
+		MemberVO vo = new MemberVO();
+		vo.setSocial("K");
+		vo.setUserid( json.get("id").toString() );
+		json = json.getJSONObject("kakao_account");
+//		if( json.has("name") ) {
+//			vo.setName( json.getString("name") );
+//		}
+//		vo.setName( json.has("name")? json.getString("name") : "");
+		vo.setName( hasKey(json, "name") );
+		vo.setEmail( hasKey(json, "email") );
+		vo.setGender( hasKey(json, "gender", "female").equals("male") ? "남"  :"여");
+		vo.setPhone( hasKey(json, "phone_number") );
+		
+		json = json.getJSONObject("profile");
+		vo.setProfile( hasKey(json, "profile_image_url") );
+		if( ! hasKey(json, "nickname").isEmpty()  ) {  //nickname에 값이 있는 경우
+			vo.setName( hasKey(json, "nickname") );
+		}
+
+			
+			// DB에 네이버로그인 정보 저장하기 - 존재여부를 확인하여 신규/변경 저장
+			if(service.member_info(vo.getUserid())==null) {
+				service.member_join(vo);
+			}else{
+				service.member_update(vo);
+			}
+			session.setAttribute("loginInfo", vo);
+		
+		
+		return "redirect:/";
+	}
+	
 	// 네이버 콜백처리
 	@RequestMapping("/naverCallback")
 	public String naverCallback(String code, String state, HttpSession session) {
@@ -199,7 +280,7 @@ public class MemberController {
 		String type = json.getString("token_type");
 		
 		// 접근 토큰을 이용하여 프로필 API 호출하기
-		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); //https://kapi.kakao.com/v2/user/me	
+		url  = new StringBuffer("https://openapi.naver.com/v1/nid/me"); 
 		response = common.requestAPI(url.toString(), type+" "+token);
 		json = new JSONObject(response);
 		if(json.getString("resultcode").equals("00")) {
@@ -253,6 +334,8 @@ public class MemberController {
 	private String hasKey(JSONObject json, String key, String value) {
 		return json.has(key) ? json.getString(key) : value;
 	}
+	
+	
 	
 	
 }
