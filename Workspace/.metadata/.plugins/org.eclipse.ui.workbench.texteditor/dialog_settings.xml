@@ -8,15 +8,16 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="access_token"/>
+		<item key="selection" value="Request"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="access_token"/>
+			<item value="request"/>
 			<item value="resultcode"/>
+			<item value="access_token"/>
 			<item value="form"/>
 			<item value="closest"/>
 			<item value="closes"/>

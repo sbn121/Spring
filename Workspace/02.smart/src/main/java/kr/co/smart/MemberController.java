@@ -335,7 +335,12 @@ public class MemberController {
 		return json.has(key) ? json.getString(key) : value;
 	}
 	
-	
+	//회원가입 화면 요청
+	@RequestMapping("/join")
+	public String join(HttpSession session) {
+		session.setAttribute("category", "join");
+		return "member/join";
+	}
 	
 	
 }
