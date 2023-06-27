@@ -48,6 +48,7 @@
 	<script>
 	$('#btn-save').click(function(){
 		if(emptyCheck()){
+			singleFileUpload();
 			$('form').submit()
 		}
 	})

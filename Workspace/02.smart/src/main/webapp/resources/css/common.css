@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-a {color: initial;}
+a {color: inherit;}
 a:not(.btn):link, a:not(.btn):hover {text-decoration: none; color: inherit;}
 
 table {
@@ -71,4 +71,8 @@ input[type=file] {
 textarea.form-control {
 	height: 400px;
 	resize: none;
+}
+
+#modal-image .modal-body img {
+	width: 100%;
 }
