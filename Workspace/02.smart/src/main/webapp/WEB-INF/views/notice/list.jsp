@@ -30,11 +30,11 @@
 			<th>첨부파일</th>
 		</tr>
 		
-		<c:if test="${empty list }">
+		<c:if test="${empty page.list }">
 		<tr><td colspan="4">공지글이 없습니다.</td></tr>
 		</c:if>
 		
-		<c:forEach items="${list }" var="vo">
+		<c:forEach items="${page.list }" var="vo">
 		<tr><td>${vo.no }</td>
 			<td class="text-start"><a class="text-link" href="info?id=${vo.id }">${vo.title }</a></td>
 			<td>${vo.name }</td>
@@ -43,5 +43,8 @@
 		</tr>
 		</c:forEach>
 	</table>
+	
+	<jsp:include page="/WEB-INF/views/include/page.jsp"/>
+	
 </body>
 </html>

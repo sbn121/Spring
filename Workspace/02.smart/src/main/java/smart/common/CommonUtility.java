@@ -27,6 +27,16 @@ import smart.member.MemberVO;
 @Service
 public class CommonUtility {
 	
+	//첨부파일 삭제 : 디스크에 저장된 물리적 파일 삭제
+	public void deleteFile(String filepath, HttpServletRequest request) {
+		if(filepath != null) {
+			filepath = filepath.replace(appURL(request)
+										, "d://app/"+request.getContextPath());
+			File file = new File(filepath);
+			if(file.exists()) file.delete();
+		}
+	}
+	
 	//파일다운로드
 	public void fileDownload(String filename, String filepath
 											, HttpServletRequest request

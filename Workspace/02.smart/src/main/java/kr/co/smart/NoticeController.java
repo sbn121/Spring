@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import smart.common.CommonUtility;
+import smart.common.PageVO;
 import smart.member.MemberDAO;
 import smart.member.MemberVO;
 import smart.notice.NoticeDAO;
@@ -34,6 +35,68 @@ public class NoticeController {
 		common.fileDownload(vo.getFilename(), vo.getFilepath(), req, res);
 		
 	}
+	
+	
+	
+	//공지글정보 수정 저장처리 요청
+	@RequestMapping("/update")
+	public String update(NoticeVO vo, MultipartFile file, HttpServletRequest request) {
+		//원래 첨부되어져 있던 파일정보를 조회해둔다
+		NoticeVO before = service.notice_info(vo.getId());
+		
+		
+		if(file.isEmpty()) {
+			//첨부파일이 없는 경우 : 원래O -> 삭제, 원래O,X ->그대로
+			//원래O 그대로 두는 경우 -> 파일명 이전정보로 담는다
+			if(!vo.getFilename().isEmpty()) {
+				vo.setFilename(before.getFilename());
+				vo.setFilepath(before.getFilepath());
+			}
+		}else {
+			//첨부파일이 있는 경우
+			//원래O,X -> 첨부파일 업로드
+			vo.setFilename(file.getOriginalFilename());
+			vo.setFilepath(common.fileUpload("notice", file, request));
+		}
+		
+		//화면에서 변경입력한 정보로 DB에 변경저장한 후 응답화면연결 - 정보화면
+		if(service.notice_update(vo)==1) {
+			//물리적 파일 삭제 처리
+			if(file.isEmpty()) {
+				//원래 O 화면에서 삭제한 경우
+				if(vo.getFilename().isEmpty()) {
+					common.deleteFile(before.getFilepath(), request);
+				}
+			}else {
+				//원래 O 바꿔서 첨부한 경우
+				common.deleteFile(before.getFilepath(), request);
+			}
+		}
+		
+		return "redirect:info?id="+vo.getId();
+	}
+	
+	//공지글정보 수정 화면 요청
+	@RequestMapping("/modify")
+	public String modify(int id, Model model) {
+		//해당 글읠 정보를 DB에서 조회해와 수정화면에 출력할 수 있도록 Model에 담는다
+		model.addAttribute("vo", service.notice_info(id));
+		return "notice/modify";
+	}
+	
+	//공지글정보 삭제처리 요청
+	@RequestMapping("/delete")
+	public String delete(int id, HttpServletRequest request) {
+		//첨부파일이 있는 경우 물리적인 파일을 찾아 삭제할 수 있도록 파일정보를 조회해둔다
+		NoticeVO vo = service.notice_info(id);
+		
+		//해당 공지글을 DB에서 삭제한다. 응답화면 - 목록화면
+		if(service.notice_delete(id)==1) {
+			common.deleteFile(vo.getFilepath(), request);
+		}
+		return "redirect:list";
+	}
+	
 	
 	//공지글정보 화면 요청
 	@RequestMapping("/info")
@@ -72,7 +135,7 @@ public class NoticeController {
 	
 	// 공지글 목록 화면 요청
 	@RequestMapping("/list")
-	public String list(Model model, HttpSession session) {
+	public String list(Model model, HttpSession session, PageVO page) {
 		// 임시 로그인처리 (테스트후 삭제/주석)--------
 		String userid = "admin";
 		String userpw = "manager";
@@ -88,7 +151,7 @@ public class NoticeController {
 //		List<NoticeVO> list =  service.notice_list();
 		//Model에 담는다
 //		model.addAttribute("list", list);
-		model.addAttribute("list", service.notice_list());
+		model.addAttribute("page", service.notice_list(page));
 		return "notice/list";
 	}
 
