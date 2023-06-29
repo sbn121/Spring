@@ -42,6 +42,9 @@
 		</table>
 		<input type="hidden" name="id" value="${vo.id }">
 		<input type="hidden" name="filename">
+		<input type="hidden" name="curPage" value="${page.curPage }">
+		<input type="hidden" name="search" value="${page.search }">
+		<input type="hidden" name="keyword" value="${page.keyword }">
 	</form>
 	
 	<div class="btn-toolbar gap-2 my-3 justify-content-center">
