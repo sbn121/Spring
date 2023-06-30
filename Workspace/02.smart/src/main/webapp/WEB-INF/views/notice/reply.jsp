@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3 class="my-4">공지글쓰기</h3>
-	<form method="post" enctype="multipart/form-data" action="register">
+	<h3 class="my-4">공지글 답글쓰기</h3>
+	<form method="post" enctype="multipart/form-data" action="reply_register">
 		<table class="tb-row">
 			<colgroup>
 				<col width="180px">
@@ -37,6 +37,14 @@
 			</tr>
 		</table>
 		<input type="hidden" name="writer" value="${loginInfo.userid }">
+<!-- 		원글관련정보 -->
+		<input type="hidden" name="root" value="${vo.root }">
+		<input type="hidden" name="step" value="${vo.step }">
+		<input type="hidden" name="indent" value="${vo.indent }">
+		<!-- 페이지 관련 정보 -->
+		<input type="hidden" name="curPage" value="${page.curPage }">
+		<input type="hidden" name="search" value="${page.search }">
+		<input type="hidden" name="keyword" value="${page.keyword }">
 	</form>
 	
 	<div class="btn-toolbar gap-2 my-3 justify-content-center">

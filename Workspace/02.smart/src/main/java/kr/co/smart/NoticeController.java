@@ -28,6 +28,32 @@ public class NoticeController {
 	
 	@Autowired private CommonUtility common;
 	
+	
+	//공지글 답글쓰기 저장처리 요청
+	@RequestMapping("/reply_register")
+	public String reply(NoticeVO vo, PageVO page, MultipartFile file, HttpServletRequest request ) throws Exception {
+		//화면에서 입력한 답글정보를 DB에 신규저장한 후 응답화면연결 - 목록
+		if(!file.isEmpty()) { //첨부된 파일이 있으면
+			vo.setFilename(file.getOriginalFilename());
+			vo.setFilepath(common.fileUpload("notice", file, request));
+		}
+		service.notice_reply_regist(vo);
+		return "redirect:list"
+				+"?curPage="+page.getCurPage()
+				+"&search="+page.getSearch()
+				+"&keyword="+URLEncoder.encode(page.getKeyword(), "utf-8");
+	}
+	
+	//공지글 답글쓰기 화면 요청
+	@RequestMapping("/reply")
+	public String reply(int id, PageVO page, Model model) {
+		//답글작성시 필요한 원글의 정보를 조회해야
+		//답글쓰기 화면에서 사용할 수 있도록 Model에 담는다
+		model.addAttribute("vo", service.notice_info(id));
+		model.addAttribute("page", page);
+		return "notice/reply";
+	}
+	
 	//공지글 첨부파일 다운로드처리 요청
 	@RequestMapping("/download")
 	public void download(int id, HttpServletRequest req, HttpServletResponse res) throws Exception {
