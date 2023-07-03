@@ -2,11 +2,40 @@
  * 공통 함수 선언
  */
  
+//10Mb를 넘는 파일을 걸러내는 처리
+function filteredFile(files){
+	var exist = false;
+	//files는 객체, 값만 따로 뽑아본다
+	//객체 : Object, 배열 Array;
+//	var obj1 = new Object();
+//	var obj2 = {};
+//	var arr1 = new Array();
+//	var arr2 = [];
+	console.log('1> ', files)
+	files = Object.values(files).filter(function(file){
+		if(file.size > 1024*1024*10) exist = true;
+		return file.size <= 1024*1024*10;
+	})
+	console.log('2> ', files)
+	
+	if(exist){
+		alert('10Mb 이상 첨부 불가!')
+	}
+	
+	return files; //걸러낸 10Mb 이하 파일들
+}
+ 
 //파일관리 객체 생성자함수
 function FileList(){
 	this.files = [];
 	
 	this.setFile = function(file){
+		//선택한 파일마다 alert이 뜬다
+//		if(file.size>1024*1024*10){
+//			alert("10MB 이상의 파일은 첨부할 수 없습니다")
+//			return;
+//		}
+		
 		this.files.push(file);
 	}
 	this.getFile = function(){
@@ -14,6 +43,21 @@ function FileList(){
 	}
 	this.removeFile = function(i){
 		this.files.splice(i, 1);
+	}
+	this.showFile = function(){
+		var tag = '';
+		if(this.files.length>0){
+			for(var i=0;i<this.files.length;i++){
+				tag += 
+				`<div class="file-item d-flex gap-2 align-items-center my-1">
+					<button type="button" class="btn-close small" data-seq="${i}"></button>
+					<span class="file-name">${this.files[i].name}</span>
+				</div>`;
+			}
+		}else {
+			tag = '<div class="text-center py-3">첨부할 파일을 마우스로 끌어 오세요</div>';
+		}
+		$('.file-drag').html(tag);
 	}
 }
 
@@ -105,6 +149,11 @@ $(document)
 		new bootstrap.Modal($('#modal-image')).show()
 	}
 }) 
+.on('click', '.file-item .btn-close', function(){
+	// 첨부된 파일 삭제 클릭시
+	fileList.removeFile($(this).data('seq'));
+	fileList.showFile();
+})
 
 //파일이 이미지파일인지 확인
 function isImage( filename ){
@@ -127,6 +176,17 @@ function rejectedFile(fileInfo, tag){
 }
 
 $(function(){
+	//다중파일선택처리
+	$('input#file-multiple').on('change', function(){
+//		var files = this.files;
+//		files = filteredFile(files)
+		var files = filteredFile(this.files) //10M 이하 파일만
+		for(var i=0; i<files.length;i++){
+			fileList.setFile(files[i]);
+		}
+		fileList.showFile()
+	})
+	
 	//프로필 이미지 선택처리
 	$('input#file-single').change(function(){
 //		console.log( $(this) )
@@ -189,6 +249,36 @@ $(function(){
 	$('[name=phone]').keyup(function(){
 		toPhone( $(this) );	
 	})
+	$('body').on('dragover dragleave drop', function(e){
+		e.preventDefault();
+	})
+	
+	//드래그드랍으로 파일첨부 처리
+	$('.file-drag').on({
+		'dragover dragleave drop' : function(e){
+			e.preventDefault();
+			
+			//드래그오버시 입력태그에 커서가 있을때처럼 보여지게
+			if(e.type=='dragover') $(this).addClass('drag-over')
+			else				   $(this).removeClass('drag-over')
+		},
+		'drop': function(e){
+			console.log(e.originalEvent.dataTransfer.files)
+//			var files = e.originalEvent.dataTransfer.files;
+			var files = filteredFile(e.originalEvent.dataTransfer.files);
+			
+			for(var i=0; i<files.length; i++){
+				//폴더는 담지 않는다
+				if(files[i].type == ""){
+					alert("폴더는 첨부할 수 없습니다")
+				}else {
+				fileList.setFile(files[i]);
+				}
+			}
+			console.log(fileList)
+			fileList.showFile();
+		}
+	})
 	
 	
 	var today = new Date();
@@ -208,6 +298,18 @@ $(function(){
 	$( ".date" ).datepicker();
 	$( ".date" ).attr('readonly', true)
 }) 
+
+//서브밋 전 다중파일첨부 정보 file태그에 담기
+function multipleFileUpload(){
+	var transfer = new DataTransfer();
+	var files = fileList.getFile();
+	if(files.length>0){
+		for(var i=0;i<files.length;i++){
+			transfer.items.add(files[i])
+		}
+	}
+	$('input#file-multiple').prop('files', transfer.files)
+}
 
 // 입력항목 입력여부 확인
 function emptyCheck(){

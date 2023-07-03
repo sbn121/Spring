@@ -46,12 +46,14 @@
 	<script>
 	
 	var fileList = new FileList();
-	
-	$('body').on('drop', function(e){
-		e.preventDefault();
-	})
+	//백틱(``) 사용하기 : 변수값을 + 로 연결하지 않고 표현식을 사용한다.
+	var name = "홍길동"; //이름은 홍길동 입니다
+	console.log("이름은"+name+"입니다")
+	console.log(`이름은\${name}입니다`)
+
 	/*
-	$('.file-drag').on('dragover dragleave drop', function(e){
+	$('.file-drag')
+	.on('dragover dragleave drop', function(e){
 		e.preventDefault();
 		
 		//드래그오버시 입력태그에 커서가 있을때처럼 보여지게
@@ -62,30 +64,11 @@
 	})
 	*/
 	
-	$('.file-drag').on({
-		'dragover dragleave drop' : function(e){
-			e.preventDefault();
-			
-			//드래그오버시 입력태그에 커서가 있을때처럼 보여지게
-			if(e.type=='dragover') $(this).addClass('drag-over')
-			else				   $(this).removeClass('drag-over')
-		},
-		'drop': function(e){
-			console.log(e.originalEvent.dataTransfer.files)
-			var files = e.originalEvent.dataTransfer.files;
-			for(var i=0; i<files.length; i++){
-				//폴더는 담지 않는다
-				if(files[i].type == ""){
-					alert("폴더는 첨부할 수 없습니다.")
-				}else {
-				fileList.setFile(files[i]);
-				}
-			}
-		}
-	})
+
 	
 	$('#btn-save').click(function(){
 		if(emptyCheck()){
+			multipleFileUpload();
 			$('form').submit()
 		}
 	})

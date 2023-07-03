@@ -36,6 +36,7 @@ where id = #{id}
 
 <!-- 공지글 신규 답글 저장 -->
 <insert id="replyRegister">
+<!-- 
 <![CDATA[
 {
 call declare begin
@@ -47,7 +48,10 @@ call declare begin
 			, #{filepath, jdbcType=VARCHAR}, #{root}, #{step}+1, #{indent}+1);
 end
 }
-]]>
+]]> -->
+	insert into notice(title, content, writer, filename, filepath, root, step, indent)
+	values (#{title}, #{content}, #{writer}, #{filename, jdbcType=VARCHAR}
+			, #{filepath, jdbcType=VARCHAR}, #{root}, #{step}+1, #{indent}+1)
 </insert>
 
 <!-- 신규 공지글 저장 -->
