@@ -10,6 +10,6 @@ import lombok.Setter;
 public class BoardVO {
 	private int id, readcnt, no, filecnt;
 	private String title, content, writer, name;
-	private Date writerdate;
+	private Date writedate;
 	private List<FileVO> fileList; 
 }

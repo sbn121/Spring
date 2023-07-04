@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="middle">
+
+<select id="dual" resultType="integer">
+	select 1 from dual
+</select>
+
+<select id="select" resultType="com.hanul.middle.MiddleVO">
+	select userid, name, email, phone, gender
+	from member 
+	where name = '송빛나'
+</select>
+
+<select id="one" resultType="string">
+	select email from customer
+	where id = 1
+</select>
+
+<select id="list" resultType="com.hanul.middle.MiddleVO">
+	select * from customer
+</select>
+
+<select id="cnt" resultType="integer">
+	select MAX(id) from customer 
+</select>
+
+</mapper>

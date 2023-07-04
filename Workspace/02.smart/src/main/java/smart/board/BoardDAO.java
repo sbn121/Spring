@@ -10,6 +10,9 @@ import smart.common.PageVO;
 @Repository
 public class BoardDAO implements BoardService {
 	@Autowired @Qualifier("hanul") private SqlSession sql;
+	
+
+	
 
 	@Override
 	public int board_register(BoardVO vo) {
@@ -32,7 +35,7 @@ public class BoardDAO implements BoardService {
 
 	@Override
 	public BoardVO board_info(int id) {
-		return null;
+		return sql.selectOne("board.info", id);
 	}
 
 	@Override
