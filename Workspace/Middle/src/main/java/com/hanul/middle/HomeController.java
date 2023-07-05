@@ -1,13 +1,9 @@
 package com.hanul.middle;
 
-import java.io.IOException;
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
@@ -21,46 +17,52 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.gson.Gson;
 
-@RestController
+
+@RestController	
 public class HomeController {
-	@Autowired @Qualifier("hanul") private SqlSession sql;
+	@Autowired @Qualifier("hanul") SqlSession sql;
 	@Autowired MiddleDAO dao;
 	
-	// RestAPI : Page가 필요할 때의 요청이 아니라 데이터가 필요할 때 파라메터를 주고 데이터를 요청함.
-	// 대부분 json이나 xml형태로 데이터를 return해준다.
-	// json{"key" : "value"}
-	// Smart 일반 로그인 : =>
+	//어노테이션 == 주석?
+	//@영어 <= 어노테이션 == 기계가 해석하는 주석.(Tag)
+	//@ ctrl+space 누르면 나오는 모든 것을은 어노테이션임. 어노테이션은 밑에 있는 메소드나 또는 변수, 객체 등의 
+	//역할을 정해주는 기능을 담당한다.
+	//class(어떤 요청을 받기 위한 객체x)
+	//@Controller class (어떤 요청을 받는 객체 ==> 컴퓨터 인식(Spring)) org.spring...어노테이션종류
 	
-	//		V	=>	M	=>	C
-	// 요청=>Controller=>Database조회(Model)=>View(Web)
-	// Android화면=>요청(Controller)=>Model=>Android화면
+	//json / xml
+	//json <= String으로 되어있는데 key와 value가 존재하고 list같은 자료구조도 [] 등으로 표현이 가능한 데이터 타입.
+	//요소 하나 (Object, DTO)==>기호 : {}, List==> {},
+	// [{vo} ... {vo.lastindex}]
 	
-	//@ResponseBody =>RestController
-	@RequestMapping("/")
-	public String home(Model model, HttpServletResponse res) throws Exception {
-		return "aaa";
-//		int i = sql.selectOne("middle.dual");
-//		model.addAttribute("i", i);
-//		res.getWriter().println(i);//<=syso x <=콘솔이 아니라 페이지에 바로 데이터를 출력하겠다.
-		//응답을 하고나서는 다시 응답을 하는 것은 오류라고 인식함. (response가 응답을 이미처리함. page x)
+	@RequestMapping(value="/list.cu", produces = "text/html;charset=utf-8" )
+	public String home() {
+		System.out.println("누군가다 왔다감");
+		List<MiddleVO> list = sql.selectList("middle.list");
+//		MiddleVO one = dao.info(vo);
+		Gson gson = new Gson();
+		//Object(List, DTO등)==> String json으로 바꾸는 메소드 : toJson메소드
+		return gson.toJson(list);
 	}
 	
-//	@RequestMapping(value="/one.cu", produces="text/html; charset=utf-8")
-//	public String one() {
-//		return sql.selectOne("middle.one");
-//	}
+	
+	@RequestMapping(value="/obj.cu", produces = "text/html;charset=utf-8")
+	public String obj() {
+		MiddleVO vo = new MiddleVO();
+		vo.setEmail("email");
+		vo.setName("이름이름");
+		return new Gson().toJson(vo);
+		}
+	
+//	@Autowired TestBean bean1;
+//	TestBean bean2;
 //	
-//	@RequestMapping(value="/list.cu", produces="text/html; charset=utf-8")
-//	public String list() {
-//		String list="";
-////		int cnt = sql.selectOne("middle.cnt");
-//		List<MiddleVO> listVo = sql.selectList("middle.list");
-//		for(MiddleVO vo : listVo) {
-//			
-//			list+=vo.getUserid()+vo.getName()+vo.getGender()+vo.getEmail()+vo.getPhone()+" ";
-//		}
-//		return list;
+//	@RequestMapping("/test.bean")
+//	public void test() {
+//		System.out.println(bean1);
+//		System.out.println(bean2);
 //	}
 	
 }
