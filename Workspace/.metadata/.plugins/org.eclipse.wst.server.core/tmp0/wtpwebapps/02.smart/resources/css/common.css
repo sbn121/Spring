@@ -73,6 +73,11 @@ textarea.form-control {
 	resize: none;
 }
 
+.comment textarea {
+	height: 90px
+}
+.comment > * { height:90px }
+
 #modal-image .modal-body img {
 	width: 100%;
 }

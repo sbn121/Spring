@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-table {table-layout: fixed;}
 .input-group .form-select { flex:initial; width: 130px }
+table { table-layout: fixed; }
 </style>
 </head>
 <body>
@@ -116,7 +116,7 @@ table {table-layout: fixed;}
 </c:if>
 <c:forEach items="${page.list}" var="vo">
 <tr><td>${vo.no }</td>
-	<td class="text-start text-truncate"><a class="text-link" href="javascript:info(${vo.id })">${vo.title }</a>
+	<td class="text-start text-truncate"><a class="text-link" href="javascript:info(${vo.id})">${vo.title }</a>
 		<c:if test="${vo.filecnt gt 0}"><i class="fa-solid fa-paperclip"></i></c:if>
 	</td>
 	<td>${vo.name }</td>
@@ -127,20 +127,21 @@ table {table-layout: fixed;}
 </table>
 </c:if>
 
-<!-- 
-table 태그의 td의 내용이 길어질 때 ... 처리하려면
-table 태그의 css에서 table-layout: fixed로 지정, td에 text-truncate클래스 지정
- -->
+<!--  
+table 태그의 td 의 내용이 길어질때 ... 처리하려면
+table 태그의 css에서 table-layout: fiexd 로 지정 +  td 에  text-truncate 클래스 지정
+-->
 
 <jsp:include page="/WEB-INF/views/include/page.jsp"/>
 
 <script>
 //상세정보화면 요청
-function info(id){
-	$('[name=id]').val(id)
-	$('[name=curPage]').val(${page.curPage})
+function info( id ){
+	$('[name=id]').val( id )
+	$('[name=curPage]').val( ${page.curPage} )
 	$('form').attr('action', 'info').submit()
 }
+
 
 //조회목록갯수 변경시
 $('[name=pageList], [name=viewType]').change(function(){

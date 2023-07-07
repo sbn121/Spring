@@ -38,8 +38,8 @@ public class HomeController {
 	// [{vo} ... {vo.lastindex}]
 	
 	@RequestMapping(value="/list.cu", produces = "text/html;charset=utf-8" )
-	public String home() {
-		System.out.println("누군가다 왔다감");
+	public String list(String param) {
+		System.out.println("누군가다 왔다감"+param);
 		List<MiddleVO> list = sql.selectList("middle.list");
 //		MiddleVO one = dao.info(vo);
 		Gson gson = new Gson();

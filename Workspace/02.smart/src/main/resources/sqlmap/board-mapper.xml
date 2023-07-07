@@ -2,36 +2,62 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="board">
 
+<!-- 방명록 글변경저장처리 -->
+<update id="update">
+update board set title = #{title}, content = #{content}
+where id = #{id}
+</update>
+
+<!-- 방명록 글조회수 증가처리 -->
+<update id="read">
+update board set readcnt = readcnt+1 where id = #{id}
+</update>
+
 <!-- 검색조건 -->
 <sql id="searchWhere">
 	<choose>
-		<when test="search=='s1'"><!-- 전체 -->
-			where title like '%'||#{keyword}||'%'
-			or content like '%'||#{keyword}||'%'
-			or writer in (select userid from member where name like '%'||#{keyword}||'%')
-		</when>
-		<when test="search=='s2'"><!-- 전체 -->
-			where title like '%'||#{keyword}||'%'
-		</when>
-		<when test="search=='s3'"><!-- 전체 -->
-			where content like '%'||#{keyword}||'%'
-		</when>
-		<when test="search=='s4'"><!-- 전체 -->
-			where writer in (select userid from member where name like '%'||#{keyword}||'%')
-		</when>
-		<when test="search=='s5'"><!-- 전체 -->
-			where title like '%'||#{keyword}||'%'
-			or content like '%'||#{keyword}||'%'
+		<when test=" search == 's1' "> <!-- 전체 -->
+		where title like '%' || #{keyword} || '%'
+		or  content like '%' || #{keyword} || '%'
+		or  writer  in (select userid from member where name like '%' || #{keyword} || '%' )		 
+		</when> 
+		<when test=" search == 's2' "> <!-- 제목-->
+		where title like '%' || #{keyword} || '%'
+		</when> 
+		<when test=" search == 's3' "> <!-- 내용-->
+		where content like '%' || #{keyword} || '%'
+		</when> 
+		<when test=" search == 's4' "> <!-- 작성자-->
+		where writer  in (select userid from member where name like '%' || #{keyword} || '%' )
+		</when> 
+		<when test=" search == 's5' "> <!-- 제목+내용 -->
+		where title like '%' || #{keyword} || '%'
+		or  content like '%' || #{keyword} || '%'
 		</when>
 	</choose>
 
 </sql>
 
+<!-- 선택한 방명록 글 삭제 -->
+<delete id="delete">
+delete from board where id = #{id}
+</delete>
+
+
+<!-- 선택한 첨부파일정보 조회 -->
+<select id="fileInfo" resultType="smart.board.FileVO">
+select * from board_file where id = #{id}
+</select>
+
 <!-- 선택한 방명록 글 조회 -->
 <select id="info" resultType="smart.board.BoardVO">
-	select b.*, name
-	from board b inner join member m on writer = userid
-	where id= #{id}
+select b.*, name 
+from board b inner join member m on writer = userid 
+where id = #{id}
+</select>
+<!-- 선택한 방명록 글의 첨부파일 정보 조회 -->
+<select id="fileList" resultType="smart.board.FileVO">
+select * from board_file where board_id = #{id}
 </select>
 
 <!-- 방명록 글 총 건수 조회 -->
@@ -40,9 +66,9 @@ select count(*) from board <include refid="searchWhere"/>
 </select>
 
 <select id="list" resultType="smart.board.BoardVO">
-select (select count(*) from board_file where b.id=board_id) filecnt, b.*  
-from (select row_number() over(order by id) no, b.*, name 
-	  from board b inner join member m on b.writer = m.userid
+select (select count(*) from board_file where b.id=board_id) filecnt, b.*
+from (select row_number() over(order by id) no, b.*, name  
+	  from board b inner join member m  on b.writer = m.userid
 	  <include refid="searchWhere"/>) b
 where no between #{beginList} and #{endList}
 order by no desc
@@ -51,28 +77,41 @@ order by no desc
 <!-- 방명록 글정보 저장 -->
 <insert id="register">
 <selectKey order="AFTER" resultType="integer" keyProperty="id">
-	select seq_board.currval from dual
+select seq_board.currval from dual
 </selectKey>
 
 insert into board(title, content, writer)
 values (#{title}, #{content}, #{writer})
+
 </insert>
+
+<!-- 삭제해야할 첨부파일 삭제처리 -->
+<delete id="fileDelete">
+delete from board_file where id = #{id}
+</delete>
+
+
+<!-- 삭제해야할 첨부파일 목록조회 -->
+<select id="fileRemoved" resultType="smart.board.FileVO">
+select * from board_file where id in (${removed}) 
+</select>
 
 <!-- 방명록에 딸린 첨부파일 정보 저장 -->
 <insert id="fileRegister">
-<foreach collection="fileList" item="file" open="insert all" separator=" " close="select * from dual">
-	into board_file (board_id, filename, filepath)
-	values (#{id}, #{file.filename}, #{file.filepath})
+
+<foreach collection="fileList" item="file" open="insert all" separator=" " 
+													close="select * from dual">
+	into board_file ( board_id, filename, filepath )
+	values ( #{id}, #{file.filename}, #{file.filepath} )
 </foreach>
 
-<!-- 
+<!--  
 insert all
 into ...
 into ...
 into ...
 select * from dual
- -->
-
+-->
 </insert>
 
 </mapper>

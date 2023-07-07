@@ -26,7 +26,8 @@ import smart.notice.NoticeVO;
 public class NoticeController {
 	@Autowired private NoticeDAO service;
 	
-	@Autowired private CommonUtility common;
+	@Autowired
+	private CommonUtility common;
 	
 	
 	//공지글 답글쓰기 저장처리 요청
@@ -93,11 +94,11 @@ public class NoticeController {
 			if(file.isEmpty()) {
 				//원래 O 화면에서 삭제한 경우
 				if(vo.getFilename().isEmpty()) {
-					common.deleteFile(before.getFilepath(), request);
+					common.deletedFile(before.getFilepath(), request);
 				}
 			}else {
 				//원래 O 바꿔서 첨부한 경우
-				common.deleteFile(before.getFilepath(), request);
+				common.deletedFile(before.getFilepath(), request);
 			}
 		}
 		
@@ -123,7 +124,7 @@ public class NoticeController {
 		
 		//해당 공지글을 DB에서 삭제한다. 응답화면 - 목록화면
 		if(service.notice_delete(id)==1) {
-			common.deleteFile(vo.getFilepath(), request);
+			common.deletedFile(vo.getFilepath(), request);
 		}
 		return "redirect:list?"
 				+"curPage="+page.getCurPage()

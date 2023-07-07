@@ -4,21 +4,18 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.mail.EmailAttachment;
-import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
@@ -31,62 +28,63 @@ import smart.member.MemberVO;
 public class CommonUtility {
 	
 	//첨부파일 여러개를 업로드하는 처리
-	public ArrayList<FileVO> attachedFiles(String category, MultipartFile[] files,
-								HttpServletRequest request) {
+	public ArrayList<FileVO> attachedFiles(String category, MultipartFile[] files
+								, HttpServletRequest request) {
 		ArrayList<FileVO> list = null;
 		for(MultipartFile attached : files) {
-			if(attached.isEmpty()) continue;
-			if(list==null) list = new ArrayList<FileVO>();
+			if( attached.isEmpty() ) continue;
+			if( list == null ) list = new ArrayList<FileVO>();
 			FileVO fileVO = new FileVO();
-			fileVO.setFilename(attached.getOriginalFilename());
-			fileVO.setFilepath(fileUpload(category, attached, request));
+			fileVO.setFilename( attached.getOriginalFilename() );
+			fileVO.setFilepath( fileUpload(category, attached, request) );
 			list.add(fileVO);
 		}
 		return list;
 	}
 	
-	//첨부파일 삭제 : 디스크에 저장된 물리적 파일 삭제
-	public void deleteFile(String filepath, HttpServletRequest request) {
-		if(filepath != null) {
-			filepath = filepath.replace(appURL(request)
-										, "d://app/"+request.getContextPath());
-			File file = new File(filepath);
-			if(file.exists()) file.delete();
+	//첨부파일 삭제: 디스크에 저장된 물리적 파일 삭제
+	public void deletedFile(String filepath, HttpServletRequest request) {
+		if( filepath != null ) {
+			filepath = filepath.replace( appURL(request)
+										, "d://app/" + request.getContextPath() );	
+			File file = new File( filepath );
+			if( file.exists() ) file.delete();
 		}
 	}
 	
+	
 	//파일다운로드
 	public void fileDownload(String filename, String filepath
-											, HttpServletRequest request
-											, HttpServletResponse response) throws Exception{
-		// filepath : http://localhost:8080/smart/upload/profile/2023/06/22/abc.png
+							, HttpServletRequest request
+							, HttpServletResponse response ) throws Exception{
+		// filepath :  http://localhost:8080/smart/upload/profile/2023/06/22/abc.png
 		// appURL : http://localhost:8080/smart
-		filepath = filepath.replace(appURL(request), "d://app/"+request.getContextPath());
-		
+		filepath = filepath.replace( appURL(request) , "d://app/" + request.getContextPath()); 
+
 		// 다운로드할 파일객체를 생성
-		File file = new File(filepath);
+		File file = new File( filepath );
 		String mime = request.getSession().getServletContext().getMimeType(filename);
 		response.setContentType(mime);
 		
-		//파일IO : 읽기/쓰기 - 단위 문자 : reader/writer, 단위 byte : input/output
+		//파일IO : 읽기/쓰기 - 단위 문자: reader/writer, 단위 byte: input/output 
 		
-		//파일을 첨부해서 쓰기작업하기
+		//파일을 첨부해서 쓰기작업하기		
 		//파일명에 한글이 있다면 인코딩처리
 		filename = URLEncoder.encode(filename, "utf-8").replaceAll("\\+", "%20");
-		response.setHeader("content-disposition", "attachment; filename="+filename);
-		FileCopyUtils.copy(new FileInputStream(file), response.getOutputStream());
+		response.setHeader("content-disposition", "attachment; filename=" + filename );
+		FileCopyUtils.copy( new FileInputStream(file) , response.getOutputStream());
 	}
 	
 	//파일업로드
 	public String fileUpload(String category, MultipartFile file, HttpServletRequest request ) {
 		//D:\Study_Spring\Workspace\.metadata\.plugins\org.eclipse.wst.server.core
 		// \tmp0\wtpwebapps\02.smart\resources
-		
-		
-	// d:\\app\smart
-		String path = "D:\\app"+request.getContextPath();// /smart
+		//String path = request.getSession().getServletContext().getRealPath("resources");
+
+		// d:\\app\smart
+		String path = "D:\\app"+ request.getContextPath(); // /smart
 //		String path = "D:/app/smart";
-		
+
 		//String upload = "/upload/profile/2023/06/22/abc.png";
 		String upload = "/upload/"+ category 
 				+ new SimpleDateFormat("/yyyy/MM/dd").format(new Date());
@@ -107,13 +105,13 @@ public class CommonUtility {
 
 	private void emailServerConnect(HtmlEmail email) {
 		email.setHostName("smtp.naver.com"); //메일서버지정
-		email.setAuthentication("sbn121", "thdqlcsk121"); //아이디/비번 으로 로그인
+		email.setAuthentication("itstudydev", "Itstudy10102"); //아이디/비번 으로 로그인
 		email.setSSLOnConnect(true); // 로그인버튼 클릭
 	}
-	private String EMAIL_ADDRESS = " sbn121@naver.com";
+	private String EMAIL_ADDRESS = "itstudydev@naver.com";
 	
-	// 이메일 보내기 : 회원가입축하이메일전송
-	public void sendWelcome(MemberVO vo, String welcomeFile) {
+	// 이메일 보내기: 회원가입축하메시지전송
+	public void sendWelcome(MemberVO vo, String welcomFile) {
 		HtmlEmail email = new HtmlEmail();
 		email.setCharset("utf-8");
 		email.setDebug(true);
@@ -121,31 +119,32 @@ public class CommonUtility {
 		//이메일서버지정
 		emailServerConnect(email);
 		try {
-			email.setFrom(EMAIL_ADDRESS, "스마트 웹&앱 관리자");
-			email.addTo(vo.getEmail(), vo.getName());
+			email.setFrom( EMAIL_ADDRESS, "스마트 웹&앱 관리자" );
+			email.addTo( vo.getEmail(), vo.getName() );
 			email.setSubject("한울 스마트 웹&앱 과정 가입 축하");
 			
 			StringBuffer content = new StringBuffer();
 			content.append("<body>");
-			content.append("<h3><a target='_blank' href='http://www.hanuledu.co.kr/'>한울 스마트 웹&앱 과정</a></h3>");
-			content.append("<div>우리 과정 가입을 축하합니다.</div>");
-			content.append("<div>프로젝트까지 마무리하시고 취업게 성공하시길 바랍니다.</div>");
-			content.append("<div>첨부된 파일을 확인하신 후 등교하세요.</div>");
+			content.append("<h3><a target='_blank' href='http://hanuledu.co.kr/'>한울 스마트 웹&앱 과정</a></h3>");
+			content.append("<div>우리 과정 가입을 축하합니다</div>");
+			content.append("<div>프로젝트까지 마무리하시고 취업에 성공하시길 바랍니다</div>");
+			content.append("<div>첨부된 파일을 확인하신후 등교하세요</div>");
 			content.append("</body>");
-			email.setHtmlMsg(content.toString());
+			email.setHtmlMsg( content.toString() );
 			
 			EmailAttachment file = new EmailAttachment();
-			file.setPath(welcomeFile); //파일선택
-			email.attach(file);		   //선택한 파일 첨부
+			file.setPath( welcomFile ); //파일선택
+			email.attach(file);			//선택한 파일 첨부
 			
-			email.send(); //메일 보내기 버튼 클릭
-			
-		} catch (EmailException e) {
+			email.send(); //메일 보내기버튼 클릭
+		
+		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
 	}
 	
-	// 이메일 보내기 : 임시 비번전송
+	
+	// 이메일 보내기: 임시비번전송 
 	public boolean sendPassword(MemberVO vo, String pw) {
 		boolean send = true;
 		HtmlEmail email = new HtmlEmail();
