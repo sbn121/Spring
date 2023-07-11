@@ -59,7 +59,9 @@ $('.btn-modify-save').click(function(){
 			data: JSON.stringify( {id:_content.data('id'), content:_content.find('textarea').val()})
 		}).done(function(response){
 			console.log(response)
-			alert(response)
+			alert(response.message)
+			_content.find('.hidden').text(response.content);
+			stayStatus(_content);
 		});
 	}
 })
@@ -81,10 +83,32 @@ function modifyStatus(_content){
 	_content.find('.hidden').html(`\${comment}`);	//원래 댓글내용 그대로 담기
 }
 
-//취소버튼 클릭시
+//삭제/취소버튼 클릭시
 $('.btn-delete-cancel').click(function(){
 	var _content = $(this).closest('.content');
+	if($(this).text()=='취소'){
 	stayStatus(_content);
+	}else{
+		//삭제클릭시
+		if(confirm('댓글을 삭제하시겠습니까?')){
+			//댓글 삭제 후 댓글목록을 다시 조회해오는 경우
+// 			$.ajax({
+// 				url: '<c:url value="/board/comment/delete"/>',
+// 				data: {id: _content.data('id')}
+// 			}).done(function(){
+// 				commentList();
+// 			})
+//			댓글 삭제 후 해당 댓글태그만 삭제하는 경우
+			$.ajax({
+				url: '<c:url value="/board/comment/delete"/>',
+				data: {id: _content.data('id')}
+			}).done(function(response){
+				if(response){
+					_content.remove();
+				}
+			})
+		}
+	}
 })
 
 //가만있는 모드 상태

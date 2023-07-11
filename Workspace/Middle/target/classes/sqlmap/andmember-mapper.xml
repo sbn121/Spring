@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="middle">
+<mapper namespace="member">
 
-<!-- ${id} id=id 컬럼으로 인식함 
-	#{id} id = 'id' 값을 인식함
--->
 <select id="list" resultType="com.hanul.middle.MiddleVO">
 	select * from customer
 </select>
 
-<select id="info" resultType="com.hanul.middle.MemberVO">
+<select id="info" resultType="member.AndMemberVO">
 	select * from andmember where id = #{id} and password = #{password}
 </select>
 

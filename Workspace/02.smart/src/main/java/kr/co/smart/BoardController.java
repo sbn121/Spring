@@ -1,6 +1,7 @@
 package kr.co.smart;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,12 +32,37 @@ public class BoardController {
 	@Autowired private BoardDAO service;
 	@Autowired private CommonUtility common;
 	
+//	//댓글정보삭제처리 리턴하는 값이 없는 경우
+//	@ResponseBody @RequestMapping("/comment/delete")
+//	public void comment_delete(int id) {
+//		//해당 댓글정보를 DB에서 삭제
+//		service.board_comment_delete(id);
+//	}
+	//댓글정보삭제처리
+	@ResponseBody @RequestMapping("/comment/delete")
+	public boolean comment_delete(int id) {
+		//해당 댓글정보를 DB에서 삭제
+		return service.board_comment_delete(id)==1 ? true : false;
+	}
+	
 	//댓글정보수정처리
 	//json으로 보내진 정보를 담기 위한 annotation : @RequestBody
+//	@ResponseBody @RequestMapping(value="/comment/update", produces="application/text; charset=utf-8")
+//	public String comment_update(@RequestBody BoardCommentVO vo) {
 	@ResponseBody @RequestMapping("/comment/update")
-	public String comment_update(@RequestBody BoardCommentVO vo) {
+		public HashMap<String, String> comment_update(@RequestBody BoardCommentVO vo) {
 		//화면에서 변경입력한 정보를 DB에 변경 저장처리
-		return service.board_comment_update(vo) == 1 ? "성공^^" : "실패ㅜㅜ";
+//		return service.board_comment_update(vo) == 1 ? "성공^^" : "실패ㅜㅜ";
+		//응답화면에서 댓글목록 전체를 다시 조회해오지 않고
+		//변경저장된 댓글만 반영되게 처리
+		HashMap<String, String> map = new HashMap<String, String>();
+		if(service.board_comment_update(vo) == 1) {
+			map.put("message", "성공^^");
+			map.put("content", vo.getContent());
+		}else {
+			map.put("message", "실패ㅠㅠ");
+		}
+		return map;
 	}
 	
 	//댓글 목록 조회
@@ -157,7 +183,7 @@ public class BoardController {
 			System.out.println( no );
 		}
 		
-		ArrayList<Integer> values = new ArrayList<Integer>();
+		ArrayList<Integer> `s = new ArrayList<Integer>();
 		int n1 = 10;
 		values.add( new Integer(10) );
 		values.add( n1 );

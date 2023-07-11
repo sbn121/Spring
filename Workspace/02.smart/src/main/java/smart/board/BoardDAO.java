@@ -90,7 +90,7 @@ public class BoardDAO implements BoardService{
 
 	@Override
 	public int board_comment_delete(int id) {
-		return 0;
+		return sql.delete("board.commentDelete", id);
 	}
 
 	@Override

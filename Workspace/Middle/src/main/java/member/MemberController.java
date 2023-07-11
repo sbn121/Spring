@@ -1,4 +1,6 @@
-package com.hanul.middle;
+package member;
+
+import java.util.HashMap;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +14,15 @@ import com.google.gson.Gson;
 public class MemberController {
 	
 	@Autowired @Qualifier("hanul") SqlSession sql;
+	@Autowired AndMemberDAO dao;
 	
-	@RequestMapping(value="/login", produces = "text/html;charset=utf-8")
-	public String login(MemberVO vo) {
-			MemberVO info = sql.selectOne("middle.info", vo);
-			return new Gson().toJson(info);
+	@RequestMapping(value="/logins", produces = "text/html;charset=utf-8")
+	public String login(String id, String pw) {
+		HashMap<String, String> params = new HashMap<String, String>();
+		params.put("id", id);
+		params.put("password", pw);
+		AndMemberVO vo = dao.login(params);
+			return new Gson().toJson(vo);
 	}
 
 }

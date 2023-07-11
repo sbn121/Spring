@@ -10,6 +10,7 @@
 	<c:when test="${category eq 'bo'}"><c:set var="title" value="방명록"/> </c:when>
 	<c:when test="${category eq 'da'}"><c:set var="title" value="공공데이터"/> </c:when>
 	<c:when test="${category eq 'vi'}"><c:set var="title" value="시각화"/> </c:when>
+	<c:when test="${category eq 'sbn'}"><c:set var="title" value="송빛나"/> </c:when>
 	<c:when test="${category eq 'join'}"><c:set var="title" value="회원가입"/> </c:when>
 </c:choose>
     <head>
@@ -51,6 +52,7 @@
                     <a href="<c:url value='/board/list'/>" class="${category eq 'bo' ? 'active':''} list-group-item list-group-item-action list-group-item-light p-3" >방명록</a>
                     <a href="<c:url value='/data/list'/>" class="${category eq 'da' ? 'active':''} list-group-item list-group-item-action list-group-item-light p-3" >공공데이터</a>
                     <a href="<c:url value='/visual/list'/>" class="${category eq 'vi' ? 'active':''} list-group-item list-group-item-action list-group-item-light p-3" >시각화</a>
+                    <a href="<c:url value='/sbn/list'/>" class="${category eq 'sbn' ? 'active':''} list-group-item list-group-item-action list-group-item-light p-3" >송빛나</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
