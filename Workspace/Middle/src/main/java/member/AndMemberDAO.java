@@ -21,4 +21,9 @@ public class AndMemberDAO {
 		AndMemberVO vo = sql.selectOne("member.info", params);
 		return vo;
 	}
+	
+	public int delete(int id) {
+		int result = sql.delete("middle.delete", id);
+		return result;
+	}
 }

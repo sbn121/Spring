@@ -47,6 +47,24 @@ public class HomeController {
 		return gson.toJson(list);
 	}
 	
+	@RequestMapping(value="/delete.cu", produces = "text/html;charset=utf-8")
+	public String delete(int id) {
+		int result = sql.delete("middle.delete", id);
+		return result==1 ? "성공" : "실패";
+	}
+	
+	@RequestMapping(value="/insert.cu", produces = "text/html;charset=utf-8")
+	public String insert(MiddleVO vo) {
+		int result = sql.insert("middle.insert", vo);
+		return result==1 ? "성공" : "실패";
+	}
+	
+	@RequestMapping(value="/update.cu", produces = "text/html;charset=utf-8")
+	public String update(MiddleVO vo) {
+		int result = sql.update("middle.update", vo);
+		return result==1 ? "성공" : "실패";
+	}
+	
 	
 	@RequestMapping(value="/obj.cu", produces = "text/html;charset=utf-8")
 	public String obj() {

@@ -6,11 +6,26 @@
 	#{id} id = 'id' 값을 인식함
 -->
 <select id="list" resultType="com.hanul.middle.MiddleVO">
-	select * from customer
+	select * from customer order by id desc
 </select>
 
 <select id="info" resultType="com.hanul.middle.MemberVO">
 	select * from andmember where id = #{id} and password = #{password}
 </select>
+
+<delete id="delete">
+	delete from customer where id = #{id}
+</delete>
+
+<insert id="insert">
+	insert into customer (name, email, phone)
+values (#{name}, #{email}, #{phone})
+</insert>
+
+<update id="update">
+update customer set name=#{name}, email=#{email}, phone=#{phone}
+where id = #{id}
+
+</update>
 
 </mapper>
