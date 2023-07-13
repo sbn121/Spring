@@ -28,4 +28,39 @@ where id = #{id}
 
 </update>
 
+<select id="select" resultType="com.hanul.middle.EmployeeVO">
+	select e.employee_id as 사번, e.first_name||' '||e.last_name as 이름, 
+        case when mod(e.employee_id, 2) = 0 then email||'@gmail.com'
+         else email||'@naver.com'
+         end as 이메일,
+        translate(e.phone_number, '.', '-') as 휴대폰번호,
+        to_char(e.hire_date, 'YYYY-MM-DD') as 입사일,
+        j.job_title as 담당업무,
+        d.department_name as 부서명,
+        nvl2(e.commission_pct
+        , to_char((e.salary+(e.salary*e.commission_pct))*1289, 'FM999,999,999,999')||'원'||'('||to_char(e.salary*e.commission_pct*1289, 'FM999,999,999,999')||')'
+        , to_char(e.salary*1289, 'FM999,999,999,999')||'원') as 급여
+from     departments d right outer join employees e on e.department_id=d.department_id
+        inner join jobs j using(job_id)
+order by 사번
+</select>
+
+<select id="search" resultType="com.hanul.middle.EmployeeVO">
+	select e.employee_id as 사번, e.first_name||' '||e.last_name as 이름, 
+        case when mod(e.employee_id, 2) = 0 then email||'@gmail.com'
+         else email||'@naver.com'
+         end as 이메일,
+        translate(e.phone_number, '.', '-') as 휴대폰번호,
+        to_char(e.hire_date, 'YYYY-MM-DD') as 입사일,
+        j.job_title as 담당업무,
+        d.department_name as 부서명,
+        nvl2(e.commission_pct
+        , to_char((e.salary+(e.salary*e.commission_pct))*1289, 'FM999,999,999,999')||'원'||'('||to_char(e.salary*e.commission_pct*1289, 'FM999,999,999,999')||')'
+        , to_char(e.salary*1289, 'FM999,999,999,999')||'원') as 급여
+from     departments d right outer join employees e on e.department_id=d.department_id
+        inner join jobs j using(job_id)
+where	(e.first_name||' '||e.last_name) like '%'||#{str}||'%' or e.email like '%'||#{str}||'%' or d.department_name like '%'||#{str}||'%'
+order by 사번
+</select>
+
 </mapper>

@@ -1,6 +1,7 @@
 package com.hanul.middle;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -23,6 +24,7 @@ import com.google.gson.Gson;
 @RestController	
 public class HomeController {
 	@Autowired @Qualifier("hanul") SqlSession sql;
+	@Autowired @Qualifier("hr") SqlSession sql1;
 	@Autowired MiddleDAO dao;
 	
 	//어노테이션 == 주석?
@@ -73,6 +75,18 @@ public class HomeController {
 		vo.setName("이름이름");
 		return new Gson().toJson(vo);
 		}
+	
+	@RequestMapping(value="/select", produces = "text/html;charset=utf-8")
+	public String select() {
+		List<EmployeeVO> list = sql1.selectList("middle.select");
+		return new Gson().toJson(list);
+	}
+	
+	@RequestMapping(value="/search", produces = "text/html;charset=utf-8")
+	public String search(String str) {
+		List<EmployeeVO> list = sql1.selectList("middle.search", str);
+		return new Gson().toJson(list);
+	}
 	
 //	@Autowired TestBean bean1;
 //	TestBean bean2;

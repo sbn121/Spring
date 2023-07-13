@@ -13,15 +13,29 @@
 		<property name="username" value="${hanul.username}"/>
 		<property name="password" value="${hanul.password}"/>
 	</bean>
+	<bean id="dbcpHr" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="${oracle.driver}"/>
+		<property name="url" value="${oracle.url}"/>
+		<property name="username" value="${hr.username}"/>
+		<property name="password" value="${hr.password}"/>
+	</bean>
 	
 	<bean id="factoryHanul" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dbcpHanul"/>
+		<property name="mapperLocations" value="classpath:sqlmap/*.xml"/>
+	</bean>
+	<bean id="factoryHr" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dbcpHr"/>
 		<property name="mapperLocations" value="classpath:sqlmap/*.xml"/>
 	</bean>
 	
 	<bean class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="factoryHanul"></constructor-arg>
 		<qualifier value="hanul" />
+	</bean>
+	<bean class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="factoryHr"></constructor-arg>
+		<qualifier value="hr" />
 	</bean>
 
 </beans>
