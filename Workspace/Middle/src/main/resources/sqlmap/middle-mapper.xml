@@ -59,7 +59,9 @@ order by 사번
         , to_char(e.salary*1289, 'FM999,999,999,999')||'원') as 급여
 from     departments d right outer join employees e on e.department_id=d.department_id
         inner join jobs j using(job_id)
-where	(e.first_name||' '||e.last_name) like '%'||#{str}||'%' or e.email like '%'||#{str}||'%' or d.department_name like '%'||#{str}||'%'
+where	(e.first_name||' '||e.last_name) like '%'||#{str}||'%' or 
+			e.email like '%'||#{str}||'%' or 
+			d.department_name like '%'||#{str}||'%'
 order by 사번
 </select>
 

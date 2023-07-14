@@ -16,6 +16,7 @@
 	//시도에 따른 시군구 조회
 	function animal_sigungu(){
 		$('#sigungu').remove();
+		$('#shelter').remove(); //시도+시군구가 모두 있는 경우만 보호소조회 가능
 		if($('#sido').val()=='') return; //시도선택 이란 기본을 선택시는 시군구 조회할 수 없음
 		
 		$.ajax({

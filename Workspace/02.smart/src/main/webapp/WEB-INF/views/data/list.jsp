@@ -45,7 +45,9 @@
 <jsp:include page="/WEB-INF/views/include/loading.jsp"/>
 <jsp:include page="/WEB-INF/views/include/modal_image.jsp"/>
 
-<script src="<c:url value='/js/animal.js'/>"></script>
+<c:set value="<%=new java.util.Date() %>" var="dd"/>
+
+<script src="<c:url value='/js/animal.js?${dd }'/>"></script>
 <script type="text/javascript" 	src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3n13cy7hca"></script>	
 <script type="text/javascript" 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ba11b3db0934f2f2e745c928445cb447"></script>	
 <script>
