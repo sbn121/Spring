@@ -17,6 +17,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	
+	//시각화 화면 요청
+	@RequestMapping("/visual/list")
+	public String list() {
+		return "visual/list";
+	}
 
 	@RequestMapping("/xml")
 	public String test1() {

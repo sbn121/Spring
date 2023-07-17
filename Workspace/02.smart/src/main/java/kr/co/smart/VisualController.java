@@ -1,13 +1,31 @@
 package kr.co.smart;
 
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import smart.visual.VisualDAO;
+
+//@Controller +@responseBody
+@RestController
+@RequestMapping("/visual")
 public class VisualController {
-	//시각화 화면 요청
-	@RequestMapping("/visual/list")
-	public String list() {
-		return "visual/list";
+	
+	@Autowired private VisualDAO service;
+	
+	//부서별 사원수 조회 요청
+//	@ResponseBody 
+	@RequestMapping("/department")
+	public Object department() {
+//	public List<HashMap<String, Object>> department() {
+		//DB에서 부서별 사원수를 조회해와 응답한다.
+		return service.department();
 	}
+	
+
 }
