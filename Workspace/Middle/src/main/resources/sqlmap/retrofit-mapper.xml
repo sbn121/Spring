@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="retrofit">
+
+<select id="select" resultType="com.hanul.middle.retrofit.CRUDRetrofitVO.java">
+	select * from CRUD_RETROFIT
+</select>
+
+<insert id="insert">
+	insert into CRUD_RETROFIT (COL1, COL2) values ('col1', 'col2')
+</insert>
+
+<update id="update">
+	update CRUD_RETROFIT set col1 = '1col' where col_no=#{col_no}
+</update>
+
+<delete id="delete">
+	delete from CRUD_RETROFIT where col_no=#{col_no}
+</delete>
+
+</mapper>

@@ -98,4 +98,27 @@ public class HomeController {
 //		System.out.println(bean2);
 //	}
 	
+	@RequestMapping(value="/sql/select", produces = "text/html;charset=utf-8")
+	public String sqlSelect() {
+		List<SqlVO> list = sql.selectList("sql.select");
+		return new Gson().toJson(list);
+	}
+	
+	@RequestMapping(value="/sql/insert", produces = "text/html;charset=utf-8")
+	public String sqlInsert() {
+		int result = sql.insert("sql.insert");
+		return result==1 ? "성공" : "실패";
+	}
+	
+	@RequestMapping(value="/sql/update", produces = "text/html;charset=utf-8")
+	public String sqlUpdate() {
+		int result = sql.update("sql.update");
+		return result==1 ? "성공" : "실패";
+	}
+	
+	@RequestMapping(value="/sql/delete", produces = "text/html;charset=utf-8")
+	public String sqlDelete() {
+		int result = sql.delete("sql.delete");
+		return result==1 ? "성공" : "실패";
+	}
 }

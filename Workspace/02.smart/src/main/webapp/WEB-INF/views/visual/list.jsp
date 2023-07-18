@@ -26,12 +26,43 @@
 	    <a class="nav-link">테스트2</a>
 	  </li>
 	</ul>
-	
+	<!-- 부서원수에 대한 막대/도넛 그래프 선택 -->
 	<div id='tab-content' class="m-md-2 m-lg-3" style='height:520px'>
-		<canvas id="chart" class="h-100 m-auto"></canvas>
+		<div class="tab text-center mt-4">
+			<div class="form-check form-check-inline">
+			  <label>
+			  	<input class="form-check-input" type="radio" name="chart" value="bar" checked>막대그래프
+			  </label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <label>
+				  <input class="form-check-input" type="radio" name="chart" value="donut">도넛그래프
+			  </label>
+			</div>
+		</div>
+<!-- 		채용인원수에 대한 년도별/월별 선택 -->
+		<div class="tab text-center mt-4">
+		
+			<div class="form-check form-check-inline">
+			  <label>
+			  	<input class="form-check-input" type="checkbox" id="top3">TOP3부서
+			  </label>
+			</div>
+			
+			<div class="form-check form-check-inline">
+			  <label>
+			  	<input class="form-check-input" type="radio" name="unit" value="year" checked>년도별
+			  </label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <label>
+				  <input class="form-check-input" type="radio" name="unit" value="month">월별
+			  </label>
+			</div>
+		</div>
+	<canvas id="chart" class="h-100 m-auto"></canvas>
+		
 	</div>
-	
-	
 	
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.js"></script> <!-- 차트라이브러리 -->
@@ -59,14 +90,48 @@ Chart.defaults.set('plugins.datalabels', {
 	font: {weight: 'bold'}, //폰트굵게
 })
 
+//그래프형태(막대/도넛) 선택시
+$('[name=chart]').change(function(){
+	department();
+})
+//채용인원수조회 단위(년도별/월별) 선택시, TOP3 체크선택/해제시
+$('[name=unit], #top3').change(function(){
+	hirement_info();
+})
+
+function hirement_info(){
+	if($('#top3').prop('checked')) hirement_top3();
+	else 						   hirement();
+}
+
+//부서원수 상위 3위까지의 년도별/월별 채용인원수
+function hirement_top3(){
+	initCanvas();
+	var unit = $('[name=unit]:checked').val();
+	$.ajax({
+		url: 'hirement/top3/'+unit,
+	}).done(function(response){
+		console.log(response)
+	})
+}
+
+function initCanvas(){
+	$('#legend').remove();
+	$('canvas#chart').remove();
+	$('#tab-content').append(`<canvas id="chart" class="h-100 m-auto"></canvas>`);
+}
+
 	$('ul.nav-tabs li').on({
 		'click': function(){
 			$('ul.nav-tabs li a').removeClass('active');
 			$(this).children('a').addClass('active');
 			
 			var idx = $(this).index();
-			if(idx==0) 		department(); //부서원수 조회
-			else if(idx==1) hirement();	  //채용인원수 조회
+			$('#tab-content .tab').addClass('d-none');
+			$('#tab-content .tab').eq(idx).removeClass('d-none');
+			
+			if(idx==0) 			department(); //부서원수 조회
+			else if(idx==1) 	hirement();	  //채용인원수 조회
 		},
 		'mouseover': function(){
 			$(this).addClass('shadow');
@@ -78,6 +143,8 @@ Chart.defaults.set('plugins.datalabels', {
 	
 	//부서원수 조회
 	function department(){
+		initCanvas();
+		
 		$.ajax({
 			url: 'department',
 		}).done(function(response){
@@ -91,8 +158,10 @@ Chart.defaults.set('plugins.datalabels', {
 				info.colors.push(colors[Math.floor(this.COUNT/10)]);
 			})
 			console.log(info);
-// 			barChart(info);
 // 			lineChart(info);
+		if($('[name=chart]:checked').val()=='bar')
+			barChart(info);
+		else
 			donutChart(info);
 		})
 		
@@ -229,11 +298,11 @@ Chart.defaults.set('plugins.datalabels', {
 	//데이터수치범위에 해당하는 범례 만들기
 	function makeLegend(){
 		var tag = 
-			`<ul class="row d-flex justify-content-center m-0 mt-4 p-0 small" id='legend'>`;
+			`<ul class="row d-flex justify-content-center m-0 mt-4 p-0 small" id="legend">`;
 			
 			for(var no=0; no<=6; no++){
 			tag+=
-				`<li class="col-auto"><span></span><font>\${no*10}~\${no*10}+9명</font></li>`;
+				`<li class="col-auto"><span></span><font>\${no*10}~\${no*10+9}명</font></li>`;
 			}	
 			tag+=
 			`<li class="col-auto"><span></span><font>\${no*10}명이상</font></li>
@@ -299,7 +368,59 @@ Chart.defaults.set('plugins.datalabels', {
 	
 	//채용인원수 조회
 	function hirement(){
-		
+		initCanvas();
+		var unit = $('[name=unit]:checked').val();
+		$.ajax({
+			url: 'hirement/'+unit,
+		}).done(function(response){
+			console.log(response)
+			var info = new Object();
+			info.datas = new Array(), info.category = [], info.colors = [];
+			$(response).each(function(){
+				info.datas.push(this.COUNT);
+				info.category.push(this.UNIT);
+				info.colors.push(colors[Math.floor(this.COUNT/10)]); //데이터수치값 범위에 맞는 색상 지정
+			})
+			info.title = `\${unit=='year' ? "년도별" : "월별"} 채용인원수`
+			unitChart(info);
+		})
+	}
+	
+	//단위별(년도별/월별) 채용인원수 그래프
+	function unitChart(info){
+		$('#tab-content').css('height', 540);
+		visual = new Chart($('#chart'), {
+			type: 'bar',
+			data: {
+				labels: info.category,
+				datasets: [
+					{
+						data: info.datas,
+						barPercentage: 0.5,
+						backgroundColor: info.colors,
+					}
+				]
+			},
+			options: {
+				layout: {padding:{top: 30, bottom: 20}},
+				plugins: {
+					datalabels: {
+						formatter: function(value){
+							return `\${value}명`;
+						}
+					},
+					legend: {display: false}, 
+				},
+				responsive: false,
+				maintainAspectRatio: false,
+				scales: {
+					y: {
+						title: {text: info.title, display: true}
+					}
+				}
+			}
+		});
+		makeLegend();
 	}
 	
 $(function(){
