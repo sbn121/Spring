@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="retrofit">
 
-<select id="select" resultType="com.hanul.middle.retrofit.CRUDRetrofitVO.java">
+<select id="select" resultType="retrofit.CRUDRetrofitVO">
 	select * from CRUD_RETROFIT
 </select>
 
 <insert id="insert">
-	insert into CRUD_RETROFIT (COL1, COL2) values ('col1', 'col2')
+	insert into CRUD_RETROFIT (COL_NO, COL1, COL2) values (1, #{col1}, #{col2})
 </insert>
 
 <update id="update">

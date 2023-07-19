@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -207,7 +208,7 @@ public class BoardController {
 	
 	
 	//선택한 방명록 정보 화면 요청
-	@RequestMapping("/info")
+	@RequestMapping(value="/info", method=RequestMethod.POST)
 	public String info(Model model, int id, PageVO page) {
 		//조회수증가처리
 		service.board_read(id);

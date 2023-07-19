@@ -16,14 +16,14 @@ public class RetrofitDAO {
 	}
 	
 	public int insert(CRUDRetrofitVO vo){
-		return sql.selectOne("retrofit.insert", vo);
+		return sql.insert("retrofit.insert", vo);
 	}
 	
 	public int update(CRUDRetrofitVO vo){
-		return sql.selectOne("retrofit.update", vo);
+		return sql.update("retrofit.update", vo);
 	}
 	
 	public int delete(CRUDRetrofitVO vo){
-		return sql.selectOne("retrofit.delete", vo);
+		return sql.delete("retrofit.delete", vo);
 	}
 }

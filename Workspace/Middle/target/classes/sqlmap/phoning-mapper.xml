@@ -5,4 +5,17 @@
 <select id="checkEmail" resultType="com.hanul.middle.PhoningVO">
 	select * from phoning where email = #{email}
 </select>
+
+<insert id="join">
+	insert into phoning (EMAIL, PW, NAME) values (#{email}, #{pw}, #{name})
+</insert>
+
+<select id="login" resultType="com.hanul.middle.PhoningVO">
+	select * from phoning where email = #{email} and pw = #{pw}
+</select>
+
+<update id="update">
+	update phoning set pw = #{pw} where email = #{email}
+</update>
+
 </mapper>
